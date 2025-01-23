@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BARRE DE NAVIGATION -->
+    <nav>
+        <div class="navbar">
+            <a href="../home.html">&#10023;</a>
+            <a href="projets.html">Mes projets</a>
+            <a href="references.html">Mes r&eacute;f&eacute;rences</a>
+            <a href="about.html" style="margin-left: auto; margin-right: 30px;">&Agrave; propos</a>
+        </div>
+    </nav>
+
+    <!-- REFERENCES -->
+    <div class="page_refs">
+        <!-- Boutons de filtre -->
+        <div class="filter-buttons">
+            <button onclick="filterItems('all')">Tous</button>
+            <button onclick="filterItems('webdesign')">Webdesign</button>
+            <button onclick="filterItems('jeu-ia')">Jeu vid&eacute;o/IA</button>
+            <button onclick="filterItems('graphisme')">Graphisme/Illustration</button>
+            <button onclick="filterItems('animation')">Animation</button>
+            <button onclick="filterItems('photo')">Photographie</button>
+            <button onclick="filterItems('modelisation3D')">Mod&eacute;lisation 3D</button>
+            <button onclick="filterItems('DOE')">Design d'objet et d'espace</button>
+            <button onclick="filterItems('textile')">Textile</button>
+            <button onclick="filterItems('son')">Son et musique</button>
+
+        </div>
+
+        <!-- Liste des references -->
+         <!-- Nom de nom () -->
+        <div class="image-grid" id="imageGrid">
+            
+            <div class="image-container webdesign">
+                <video id="videoRef" autoplay muted loop>
+                    <source src="../src/img/refs/supima.mp4" type="video/mp4" />
+                </video>
+                <div class="slide">
+                    <div class="legende"><a href="https://supima.com/" target="_blank"><em>Supima</em></a><br />Développement marque : Jason L. THOMPSON, 
+                        Marketing et promotions : Buxton S. MIDYETTE<br />(2025)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/obliviousMind_compo41.jpeg" alt="Compostion 41 de The Oblivious Mind (2024)">
+                <div class="slide">
+                    <div class="legende"><em>Compostion 41</em><br />The Oblivious Mind<br />(2024)</div>
+                </div>
+            </div>
+
+            <div class="image-container photo">
+                <img src="../src/img/refs/astrayMiles.jpeg" alt="Flamingone de Miles ASTRAY (2024)">
+                <div class="slide">
+                    <div class="legende"><em>Flamingone</em><br />Miles ASTRAY<br />(2024)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/moeB.jpg" alt="Freeform de B-MOE (2024)">
+                <div class="slide">
+                    <div class="legende"><em>Freeform</em><br />B-MOE<br />(2024)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container jeu-ia">
+                <img src="../src/img/refs/freeLives_teraNil.jpg" alt="Tera Nil de Free Lives (2023)">
+                <div class="slide">
+                    <div class="legende"><em>Tera Nil</em><br />Free Lives<br />(2023)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/giraltCamil.jpeg" alt="About Colour - 28 de Camil GIRALT (2023)">
+                <div class="slide">
+                    <div class="legende"><em>About Colour - 28</em><br />Camil GIRALT<br />(2023)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/hyupYoon.jpg" alt="The River de Yoon HYUP (2023)">
+                <div class="slide">
+                    <div class="legende"><em>The River</em><br />Yoon HYUP<br />(2023)</div>
+                </div>
+            </div>
+
+            <div class="image-container DOE photo">
+                <img src="../src/img/refs/laukkaAnni.jpg" alt="The Last Pla de Anni LAUKKA (2023)">
+                <div class="slide">
+                    <div class="legende"><em>The Last Play</em><br />Anni LAUKKA<br />(2023)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/maslorrensLidia.jpg" alt="Face to face de Lidia MASLORRENS (2023)">
+                <div class="slide">
+                    <div class="legende"><em>Face to face</em><br />Lidia MASLORRENS<br />(2023)</div>
+                </div>
+            </div>
+
+            <div class="image-container jeu-ia graphisme">
+                <img src="../src/img/refs/rundisc_chantsOfSenaar.jpg" alt="Chants of Senaar de Rundisc (2023)">
+                <div class="slide">
+                    <div class="legende"><em>Chants of Senaar</em><br />Rundisc<br />(2023)</div>
+                </div>
+            </div>
+
+            <div class="image-container photo">
+                <img src="../src/img/refs/schallerAlan.jpg" alt="Metropolis de Alan SCHALLER (2023)">
+                <div class="slide">
+                    <div class="legende"><em>Metropolis</em><br />Alan SCHALLER<br />(2023)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/schubertEvelyn.jpg" alt="Abstract vermilion de Evelyn SCHUBERT (2022)">
+                <div class="slide">
+                    <div class="legende"><em>Abstract vermilion</em><br />Evelyn SCHUBERT<br />(2023)</div>
+                </div>
+            </div>
+            
+            <div class="image-container graphisme photo">
+                <img src="../src/img/refs/seelbachApril.jpg" alt="The Last Pla de Anni LAUKKA (2023)">
+                <div class="slide">
+                    <div class="legende"><em>Heading to Moab</em><br />April SEELBACH<br />(2023)</div>
+                </div>
+            </div>
+
+
+            
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/jacquemetAdrien_materialburst.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Material Burst</em><br />Adrien JAQUEMENT<br />(2022)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/hermelyndisilvestroRozanne.jpg" alt="Endless blues de Rozanne HERMELYN DI SILVESTRO (2022)">
+                <div class="slide">
+                    <div class="legende"><em>Endless blues</em><br />Rozanne HERMELYN DI SILVESTRO<br />(2022)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme jeu-ia">
+                <img src="../src/img/refs/massiveMonster_cultOfTheLamb.jpg" alt="Cult of the Lamb de Massive Monster (2022)">
+                <div class="slide">
+                    <div class="legende"><em>Cult of the Lamb</em><br />Massive Monster<br />(2022)</div>
+                </div>
+            </div>
+            
+            <div class="image-container graphisme DOE">
+                <img src="../src/img/refs/golchiniGolsa.jpeg" alt="Lunch Time de Golsa GOLCHINI (2022)">
+                <div class="slide">
+                    <div class="legende"><em>Lunch Time</em><br />Golsa GOLCHINI<br />(2022)</div>
+                </div>
+            </div>
+            
+            <div class="image-container graphisme son animation modelisation3D">
+                <img src="../src/img/refs/mielgoAlberto.jpg" alt="Jibaro de Alberto MIELGO (2022)">
+                <div class="slide">
+                    <div class="legende"><em>Jibaro</em><br />Alberto MIELGO<br />(2022)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container graphisme son animation modelisation3D">
+                <img src="../src/img/refs/fortiche_arcane.jpg" alt="The Mountain of Sgaana produit par Christopher AUCHTER (2020)">
+                <div class="slide">
+                    <div class="legende"><em>Arcane</em><br />Production : <br />Christian LINKE, <br />Marc MERILL,<br />Brandon BECK, <br />Jane CHUNG,<br /> Thomas VU<br />(2021-2024)</div>
+                </div>
+            </div>
+            
+            <div class="image-container textile">
+                <img src="../src/img/refs/mohebzandiDesiree_fieldsofreflection.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Fields of Reflections</em><br />Désirée MOHEB-ZANDI<br />(2021)</div>
+                </div>
+            </div>
+
+            
+
+            <div class="image-container graphisme animation">
+                <img src="../src/img/refs/sgaana.jpg" alt="The Mountain of Sgaana produit par Christopher AUCHTER (2020)">
+                <div class="slide">
+                    <div class="legende"><em>The Mountain of Sgaana</em><br />Producteur : Christopher AUCHTER<br />(2020)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container jeu-ia">
+                <img src="../src/img/refs/chanBertWangChak_lenia.gif" alt="Lenia de Bert Wang-Chak CHAN (2019)">
+                <div class="slide">
+                    <div class="legende"><em>Lenia</em><br />Bert Wang-Chak CHAN<br />(2019)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container jeu-ia">
+                <img src="../src/img/refs/digitalSun_Moonlighter.jpg" alt="Moonlighter de Digital Sun (2018)">
+                <div class="slide">
+                    <div class="legende"><em>Moonlighter</em><br />Digital Sun<br />(2018)</div>
+                </div>
+            </div>
+            
+            <div class="image-container graphisme jeu-ia animation">
+                <img src="../src/img/refs/nomadaStudio_gris.jpg" alt="Gris de Nomada Studio (2018)">
+                <div class="slide">
+                    <div class="legende"><em>Gris</em><br />Nomada Studio<br />(2018)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/edgarWalthert_TheEvolutionofEmojiintoaLanguage.jpeg" alt="The Evolution of Emoji into a Language de Edgar WALTHERT (2018)">
+                <div class="slide">
+                    <div class="legende"><em>The Evolution of Emoji<br />into a Language</em><br />Edgar WALTHERT<br />(2018)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container jeu-ia">
+                <img src="../src/img/refs/motionTwin_deadCells.jpg" alt="Dead Cells de Motion Twin (2017)">
+                <div class="slide">
+                    <div class="legende"><em>Dead Cells</em><br />Motion Twin<br />(2017)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container">
+                <img src="../src/img/refs/alphaGoVSLeeSe-Dol.jpeg" alt="AlphaGo de Google DeepMind (2016)">
+                <div class="slide">
+                    <div class="legende"><em>AlphaGo</em><br />Google DeepMind<br />(2016)<br />Duel entre AlphaGo<br />et LEE Se-Dol</div>
+                </div>
+            </div>
+
+            <div class="image-container DOE">
+                <img src="../src/img/refs/ristPipilotti.jpg" alt="Pixel Forest de Pipilotti RIST (2016)">
+                <div class="slide">
+                    <div class="legende"><em>Pixel Forest</em><br />Pipilotti RIST<br />(2016)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme ">
+                <img src="../src/img/refs/villeneuveDenis_premierContact.png" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Premier Contact</em><br />Producteur : <br />Denis VILLENEUVE<br />(2016)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container webdesign">
+                <video id="videoRef" autoplay muted loop>
+                    <source src="../src/img/refs/spasskyFischer.mp4" type="video/mp4" />
+                </video>                <div class="slide">
+                    <div class="legende"><a href="http://spassky-fischer.fr/fr/#" target="_blank"><em>Spassky Fischer</em></a><br />Hugo ANGLADE, Thomas PETITJEAN et Antoine STEVENOT<br />(2014)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme son animation">
+                <img src="../src/img/refs/mooreTomm.jpg" alt="Le Chant de la Mer de Tomm MOORE (2014)">
+                <div class="slide">
+                    <div class="legende"><em>Le Chant de la Mer</em><br />Tomm MOORE<br />(2014)</div>
+                </div>
+            </div>
+
+            <div class="image-container jeu-ia graphisme">
+                <img src="../src/img/refs/ustwoGames_monumentValley.jpeg" alt="Monument Valley de Ustwo Games (2014)">
+                <div class="slide">
+                    <div class="legende"><em>Monument Valley</em><br />Ustwo Games<br />(2014)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container DOE photo textile">
+                <img src="../src/img/refs/kusamaYayoi.jpeg" alt="Grow on you de Bart HESS avec Lucy MCRAE (2007)">
+                <div class="slide">
+                    <div class="legende"><em>Love is calling</em><br />Yayoi KUSAMA<br />(Depuis 2012)</div>
+                </div>
+            </div>
+
+            <div class="image-container textile photo">
+                <img src="../src/img/refs/iletaituntruc.jpeg" alt="Grow on you de Bart HESS avec Lucy MCRAE (2007)">
+                <div class="slide">
+                    <div class="legende">Association <br /><em>Il était un Truc…</em><br />(Depuis 2012)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container photo">
+                <img src="../src/img/refs/abramovicMarina_theartistispresent.jpg" alt="Grow on you de Bart HESS avec Lucy MCRAE (2007)">
+                <div class="slide">
+                    <div class="legende"><em>The Artist is present</em><br />Marina ABRAMOVIC<br />2010</div>
+                </div>
+            </div>
+            
+
+
+            <div class="image-container textile photo">
+                <img src="../src/img/refs/hessBart.jpg" alt="Grow on you de Bart HESS avec Lucy MCRAE (2007)">
+                <div class="slide">
+                    <div class="legende"><em>Grow on you</em><br />Bart HESS avec Lucy MCRAE<br />(2007)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container graphisme DOE">
+                <img src="../src/img/refs/vanderstokkerLily.jpg" alt="Easy Fun de Lily VAN DER STOKKER (2003)">
+                <div class="slide">
+                    <div class="legende"><em>Easy Fun</em><br />Lily VAN DER STOKKER<br />(2003)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container DOE graphisme photo">
+                <img src="../src/img/refs/lewittSol_WD746.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Cube avec lavis d'encre de couleur superposés (WD #746)</em><br />Sol LEWITT<br />(1994)</div>
+                </div>
+            </div>
+
+
+            
+            <div class="image-container animation son graphisme">
+                <img src="../src/img/refs/ghibli.jpeg" alt="Moonlighter de Digital Sun (2018)">
+                <div class="slide">
+                    <div class="legende"><em>Studio Ghibli</em><br />Producteurs : Hayao MIYAZAKI et Isao TAKAHATA, 
+                        Musiques : Joe HISAISHI<br />(Depuis 1985)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container DOE">
+                <img src="../src/img/refs/tinguelyJean.jpg" alt="Maschinenbar de Jean TINGUELY (1960-85)">
+                <div class="slide">
+                    <div class="legende"><em>Maschinenbar</em><br />Jean TINGUELY<br />(1960-85)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container jeu-ia">
+                <img src="../src/img/refs/conway_jeuDeLaVie.gif" alt="">
+                <div class="slide">
+                    <div class="legende"><em><a href="https://conwaylife.com/">Le jeu de la vie</a></em><br />John H. CONWAY<br />(1950)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/albersJosef_hommageaucarre.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Hommage au carré</em><br />Josef ALBERS<br />(1950)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/herbinAuguste.jpg" alt="Alphabet plastique de Auguste HERBIN (1945)">
+                <div class="slide">
+                    <div class="legende"><em>Alphabet plastique</em><br />Auguste HERBIN<br />(1945)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/mondrianPiet_composition2.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Composition II</em><br />Piet MONDRIAN<br />(1929)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container textile">
+                <img src="../src/img/refs/albersAnni.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Black White Yellow</em><br />Anni ALBERS<br />(1926)</div>
+                </div>
+            </div>
+            
+            
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/beckJulia.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>L&apos;&Eacute;tang</em><br />Julia BECK<br />(Vers 1900)</div>
+                </div>
+            </div>
+
+
+
+            <div class="image-container DOE">
+                <img src="../src/img/refs/kintsugi.jpeg" alt="L'art du Kintsugi dans la Culture Japonaise (Depuis 1450)">
+                <div class="slide">
+                    <div class="legende"><em>L'art du Kintsugi</em><br />Culture Japonaise<br />(Depuis 1450)</div>
+                </div>
+            </div>
+
+            <div class="image-container graphisme">
+                <img src="../src/img/refs/cordierBaude_circleCanon.jpg" alt="">
+                <div class="slide">
+                    <div class="legende"><em>Canon Circle</em><br />Baude CORDIER<br />(Avant 1440)</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function filterItems(category) {
+            const items = document.querySelectorAll('.image-container');
+
+            items.forEach(item => {
+                // Remove the 'hidden' class to make items visible
+                item.classList.remove('hidden');
+                
+                if (category === 'all') {
+                    // Show all items
+                    item.classList.add('visible');
+                } else if (item.classList.contains(category)) {
+                    // Show items with the matching category
+                    item.classList.add('visible');
+                } else {
+                    // Hide items that don't match the selected category
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Show all items by default
+        filterItems('all');
+
+    </script>
+</body>
+</html>

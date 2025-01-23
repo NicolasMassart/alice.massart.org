@@ -1,0 +1,438 @@
+/*************************************** FONTS ***************************************/
+
+@font-face {
+    font-family: Gulax;
+    src: url("src/fonts/Gulax.otf");
+}
+
+/*************************************** VARIABLES ***************************************/
+
+:root {
+    --ABOUT-margin-right : 170px;
+    --ABOUT-margin-left : 50px;
+    --ABOUT-border-radius : 50px;
+}
+/*************************************** GENERAL ***************************************/
+body {
+    background-color: #22767A;
+    margin-top: 100px;
+    color: white;
+}
+
+h2 {
+    font-family: "Gulax";
+}
+
+p {
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+}
+
+a{
+    color: white;
+}
+/*************************************** BARRE DE NAVIGATION ***************************************/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    z-index: 1000; 
+
+    padding: 0;
+    left: 0;
+
+    background-color: black;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);   
+    color: white;
+}
+
+.navbar a {
+    font-family: "Gulax";
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #0f4245;
+}
+
+/*************************************** PAGE TITRE ***************************************/
+
+.title-container {
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+
+    font-size: 30px;
+    color: white; /* Assurez-vous que le texte est lisible */
+}
+
+#rectangle-gauche {
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 200px; /* Largeur ajustee pour un rectangle plus grand */
+    height: 480px; /* Hauteur ajustee */
+    background-color: #219ba1;
+    z-index: 1; /* Derriere le texte mais devant le fond */
+
+    font-family: "Bai Jamjuree", sans-serif;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#rectangle-droite {
+    position:absolute;
+    top: 0;
+    right:0;
+    width: 200px; /* Largeur ajustee pour un rectangle plus grand */
+    height: 430px;
+    background-color: #219ba1;
+    z-index: 1; /* Derriere le texte mais devant le fond */
+
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.title {
+    position: relative;
+    z-index: 2; /* Au-dessus du rectangle */
+}
+
+.title img{
+    display: inline;
+    width: 750px;
+}
+
+
+/*************************************** GLOBAL STYLES ***************************************/
+.image-container {
+    position: relative; /* Enables correct positioning for .slide */
+    overflow: hidden; /* Ensures content stays inside the container */
+    width: 100%;
+}
+
+.image-container img,  .image-container video{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image scales properly */
+}
+
+/* Slide overlay */
+.slide {
+    position: absolute;
+    top: -100%; /* Start off-screen */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 185, 191, 0.85); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: top 0.5s ease, opacity 0.5s ease; /* Sliding and opacity effect */
+}
+
+/* Slide effect on hover */
+.image-container:hover .slide {
+    top: 0; /* Move the slide from top to bottom */
+    opacity: 1; /* Make the slide visible */
+}
+
+/* Caption style */
+.legende {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    position: absolute;
+}
+
+.projets .image-container,
+.page_refs .image-container {
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s ease; /* Optional scaling effect */
+}
+
+/*************************************** PROJETS SECTION ***************************************/
+.projets {
+    margin-top: 110px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive avec des colonnes auto-ajustables */
+    gap: 20px; /* Espace entre les images */
+}
+
+.projets .image-container {
+    margin-bottom: 20px; /* Espace entre les éléments */
+    height: 500px; /* Taille fixe du conteneur */
+    display: flex; /* Active Flexbox */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    position: relative; /* Nécessaire pour le slide */
+    overflow: hidden; /* Cache les débordements éventuels */
+}
+
+.projets video {
+    object-fit: contain; /* Maintient les proportions de la vidéo */
+    display: block; /* Corrige tout décalage non désiré */
+    height: 500px;
+}
+
+
+.projets h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.projets p {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projets .image-container img {
+    display: block;
+    width: 354px;
+    height: 500px;
+    object-fit: contain; /* Ensures image scales properly */
+}
+
+/* Slide overlay */
+.slide {
+    position: absolute;
+    top: -100%; /* Start off-screen */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 185, 191, 0.85); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: top 0.5s ease, opacity 0.5s ease; /* Sliding and opacity effect */
+}
+
+/*************************************** REFERENCES SECTION ***************************************/
+
+.page_refs {
+    margin-top: 110px;
+    padding: 20px;
+}
+
+.page_refs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    display: none; /* Hidden by default */
+}
+
+.list-item.visible {
+    display: block; /* Visible when filtered */
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #219ba1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    background-color: #0f4245;
+}
+
+/* Grid layout */
+.page_refs .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    grid-auto-rows: auto; /* Automatically adjusts row height */
+}
+
+.page_refs .image-container {
+    margin-bottom: 20px; /* Adds spacing between images */
+    aspect-ratio: 1 / 1; /* Ensures a square aspect ratio */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Fade-in and smooth movement */
+}
+
+.page_refs .image-container.visible {
+    opacity: 1;
+}
+
+.page_refs .image-container.hidden {
+    display: none;
+}
+
+.page_refs .image-container.visible {
+    transform: translateY(0);
+}
+
+.page_refs .image-container.hidden {
+    transform: translateY(20px);
+}
+
+/*************************************** ABOUT ***************************************/
+
+.formations, .experiences {
+    border-radius: var(--ABOUT-border-radius);
+}
+
+.about h2 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    /*margin-left: 150px;*/
+    text-align: center;
+}
+
+.about h3{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+}
+
+/* Photo */
+
+.moiphoto {
+    float: left;
+    border-radius: var(--ABOUT-border-radius);
+    width:700px;
+    height: 400px;
+    overflow: hidden;
+    margin-left: var(--ABOUT-margin-left);
+}
+
+.moiphoto img {
+    float: left;
+    border-radius: 50px;
+    height: 100%;
+    width: auto;
+    display: block;
+}
+/***/
+
+.contact h2, .contact p {
+    margin-right: var(--ABOUT-margin-right);
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.contact p {
+    font-size: 17px;
+    text-align: right;
+}
+
+
+/* Boutons */
+
+.contact-button {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    gap: 10px; /* Espacement entre les boutons */
+    align-items: flex-end; /* Centre les boutons horizontalement */
+    margin-right: var(--ABOUT-margin-right);
+}
+
+.contact button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #0f4245; /* Effet hover */
+    transition: background-color 0.3s ease; /* Animation pour un effet fluide */
+}
+
+#insta {
+    background-image: url('src/img/about/instaLogo.png');
+    border-radius: 12px;
+}
+
+#linkedin {
+    background-image: url('src/img/about/linkedinLogo.png');
+    border-radius: 5px;
+}
+
+/***/
+
+/* Formations */
+
+.formations {
+    margin-top: 150px;
+    margin-left: var(--ABOUT-margin-left);
+    margin-bottom: 50px;
+    margin-right: var(--ABOUT-margin-right);
+    padding: 10px;
+
+    background-color: #0f4245;
+}
+
+.experiences {
+    margin-top: 50px;
+    margin-left: var(--ABOUT-margin-left);
+    margin-bottom: 50px;
+    margin-right: var(--ABOUT-margin-right);
+    padding: 10px;
+
+    background-color: #0f4245;
+}
+
+.formations p, .experiences p {
+    margin-left: 50px;
+}
+
+.formationIndividuelle, .experienceIndividuelle{
+    margin: 50px 40px;
+}
+
+/***/

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+     <!-- BARRE DE NAVIGATION -->
+     <nav>
+        <div class="navbar">
+            <a href="../home.html">&#10023;</a>
+            <a href="projets.html">Mes projets</a>
+            <a href="references.html">Mes r&eacute;f&eacute;rences</a>
+            <a href="about.html" style="margin-left: auto; margin-right: 30px;">&Agrave; propos</a>
+
+        </div>
+    </nav>
+
+    <!-- REFERENCES -->
+    <div class="page_refs">
+
+        <!-- Boutons de filtre -->
+        <div class="filter-buttons">
+            <button onclick="filterItems('all')">Tous</button>
+            <button onclick="filterItems('webdesign')">Webdesign</button>
+            <button onclick="filterItems('graphisme')">Graphisme</button>
+            <button onclick="filterItems('modelisation3D')">Modélisation 3D</button>
+            <button onclick="filterItems('illustration')">Illustration</button>
+            <button onclick="filterItems('son')">Son et musique</button>
+            <button onclick="filterItems('DOE')">Design d'objet et d'espace</button>
+            <button onclick="filterItems('textile')">Textile</button>
+            <button onclick="filterItems('photo')">Photographie</button>
+
+
+
+
+        </div>
+
+        <!-- Liste des projets -->
+        <ul id="references">
+            <li class="list-item webdesign">Spassky Fischer <a href="http://spassky-fischer.fr/fr/#">spassky-fischer.fr</a></li>
+            <li class="list-item illustration">Lily VAN DER STOKKER</li>
+            <li class="list-item illustration son">Tomm MOORE</li>
+            <li class="list-item graphisme illustration son">Alberto Mielgo</li>
+            <li class="list-item DOE textile">Bart HESS</li>
+            <li class="list-item DOE graphisme">Pipilotti RIST</li>
+            <li class="list-item textile">D&eacute;sir&eacute; MOHEB-ZANDI</li>
+            <li class="list-item graphisme illustration DOE">Mr. DOODLE</li>
+            <li class="list-item photo">Alan SCHALLER</li>
+            <li class="list-item illustration">Yoon HYUP</li>
+            <li class="list-item graphisme illustration">L'alphabet plastique d'Auguste HERBIN</li>
+            <li class="list-item photo illustration">Evelyn SCHUBERT</li>
+            <li class="list-item illustration">B-Moe</li>
+            <li class="list-item illustration">Camil GIRALT</li>
+            <li class="list-item illustration">Kiki la petite sorcière</li>
+
+
+
+
+
+
+
+
+
+            <li class="list-item ">NOM</li>
+
+        </ul>
+    </div>
+
+    <script>
+        function filterItems(category) {
+            const $items = document.querySelectorAll('.list-item');
+                console.log($items);
+
+            $items.forEach(item => {
+                if (category === 'all') {
+                item.classList.add('visible'); // Affiche tous les éléments
+                } else if (item.classList.contains(category)) {
+                item.classList.add('visible'); // Affiche les éléments correspondants
+                } else {
+                item.classList.remove('visible'); // Cache les éléments non correspondants
+                }
+            });
+        }
+
+        filterItems('all');
+    </script>
+</body>
+</html>
