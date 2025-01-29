@@ -197,7 +197,7 @@ a{
 .projets video {
     object-fit: contain; /* Maintient les proportions de la vidéo */
     display: block; /* Corrige tout décalage non désiré */
-    height: 500px;
+    /*height: 500px;*/
 }
 
 
