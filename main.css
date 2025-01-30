@@ -198,7 +198,6 @@ a{
     object-fit: contain; /* Maintient les proportions de la vidéo */
     display: block; /* Corrige tout décalage non désiré */
     /*height: 500px;*/
-    width:auto;
 }
 
 
