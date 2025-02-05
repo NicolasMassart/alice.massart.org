@@ -316,7 +316,11 @@ a{
 }
 
 /*************************************** ABOUT ***************************************/
-
+.about {
+    margin-right: var(--ABOUT-margin-right);
+    margin-left: var(--ABOUT-margin-left);
+}
+    
 .formations, .experiences {
     border-radius: var(--ABOUT-border-radius);
 }
@@ -341,7 +345,6 @@ a{
     width:700px;
     height: 400px;
     overflow: hidden;
-    margin-left: var(--ABOUT-margin-left);
 }
 
 .moiphoto img {
@@ -352,10 +355,6 @@ a{
     display: block;
 }
 /***/
-
-.contact h2, .contact p {
-    margin-right: var(--ABOUT-margin-right);
-}
 
 .contact h2 {
     font-size: 24px;
@@ -376,7 +375,6 @@ a{
     flex-direction: column; /* Aligne les éléments en colonne */
     gap: 10px; /* Espacement entre les boutons */
     align-items: flex-end; /* Centre les boutons horizontalement */
-    margin-right: var(--ABOUT-margin-right);
 }
 
 .contact button {
@@ -410,9 +408,7 @@ a{
 
 .formations {
     margin-top: 150px;
-    margin-left: var(--ABOUT-margin-left);
     margin-bottom: 50px;
-    margin-right: var(--ABOUT-margin-right);
     padding: 10px;
 
     background-color: #0f4245;
@@ -420,9 +416,7 @@ a{
 
 .experiences {
     margin-top: 50px;
-    margin-left: var(--ABOUT-margin-left);
     margin-bottom: 50px;
-    margin-right: var(--ABOUT-margin-right);
     padding: 10px;
 
     background-color: #0f4245;
