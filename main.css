@@ -321,7 +321,7 @@ a{
     margin-left: var(--ABOUT-margin-left);
 }
     
-.formations, .experiences {
+.formations, .experiences, .competences, .interets {
     border-radius: var(--ABOUT-border-radius);
 }
 
@@ -414,7 +414,7 @@ a{
     background-color: #0f4245;
 }
 
-.experiences {
+.experiences, .competences, .interets {
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 10px;
@@ -422,11 +422,11 @@ a{
     background-color: #0f4245;
 }
 
-.formations p, .experiences p {
+.formations p, .experiences p, .competences p, .interets p {
     margin-left: 50px;
 }
 
-.formationIndividuelle, .experienceIndividuelle{
+.formationIndividuelle, .experienceIndividuelle, .competenceIndividuelle, .interetIndividuel{
     margin: 50px 40px;
 }
 
