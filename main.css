@@ -360,6 +360,7 @@ a{
     font-size: 24px;
     margin-bottom: 30px;
     text-align: right;
+    padding-top: 80px;
 }
 
 .contact p {
@@ -411,7 +412,7 @@ a{
 /* Formations */
 
 .formations {
-    margin-top: 150px;
+    margin-top: 215px;
     margin-bottom: 50px;
     padding: 10px;
 
