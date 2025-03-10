@@ -372,9 +372,8 @@ a{
 
 .contact-button {
     display: flex;
-    flex-direction: column; /* Aligne les éléments en colonne */
-    gap: 10px; /* Espacement entre les boutons */
-    align-items: flex-end; /* Centre les boutons horizontalement */
+    gap: 25px;
+    justify-content: flex-end;
 }
 
 .contact button {
@@ -399,6 +398,11 @@ a{
 
 #linkedin {
     background-image: url('src/img/about/linkedinLogo.png');
+    border-radius: 5px;
+}
+
+#github {
+    background-image: url('src/img/about/github.png');
     border-radius: 5px;
 }
 
