@@ -126,7 +126,7 @@
 
             <div class="modelisation">
                 <div class="image-container">
-                    <video id="videoFiole" autoplay muted loop>
+                    <video class="videoPlay" autoplay muted loop>
                         <source src="../src/img/travail/modelisation/fiole_S3.mp4" type="video/mp4" />
                     </video>
                     <div class="slide">
@@ -181,7 +181,7 @@
 
             <div class="photo">
                 <div class="image-container">
-                    <video id="videoNeige" autoplay muted loop>
+                    <video class="videoPlay" autoplay muted loop>
                         <source src="../src/img/travail/photo/S3_Belgique.mp4" type="video/mp4" />
                     </video>
                     <div class="slide">
@@ -225,7 +225,9 @@
             
             <div class="code-creatif">
                 <div class="image-container">
-                    <img src="../src/img/travail/code-creatif/netart_S4.mp4" alt="">
+                    <video class="videoPlay" autoplay muted loop>
+                        <source src="../src/img/travail/code-creatif/netart_S4.mp4" type="video/mp4" />
+                    </video>
                     <div class="slide">
                         <div class="legende">
                             <h2>Net.Art</h2>
@@ -238,7 +240,9 @@
 
             <div class="autre">
                 <div class="image-container">
-                    <img src="../src/img/travail/autre/VIDEO_rendu.mp4" alt="">
+                    <video class="videoPlay" autoplay muted loop>
+                        <source src="../src/img/travail/autre/wsArtsNumériques_S4.mp4" type="video/mp4" />
+                    </video>
                     <div class="slide">
                         <div class="legende">
                             <h2><em>The Lake at the End of the world</em>, Caroline MacDonald (1988)</h2>
@@ -271,20 +275,22 @@
 
 
     <script>
-        const video = document.getElementById('videoFiole');
+        const videos = document.querySelectorAll('.videoPlay');
     
-        // Démarre ou stoppe la vidéo selon la visibilité de la page
+        // Gère la visibilité des vidéos
         document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'visible') {
-                video.play();
-            } else {
-                video.pause();
-            }
+            videos.forEach(video => {
+                if (document.visibilityState === 'visible') {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
         });
     
-        // Joue automatiquement la vidéo au chargement de la page
+        // Joue automatiquement toutes les vidéos au chargement de la page
         window.addEventListener('load', () => {
-            video.play();
+            videos.forEach(video => video.play());
         });
     </script>
     
