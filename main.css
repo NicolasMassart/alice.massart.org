@@ -31,6 +31,10 @@ p {
 a{
     color: white;
 }
+
+img{
+    background-color : #3f3f3f;
+}
 /*************************************** BARRE DE NAVIGATION ***************************************/
 
 .navbar {
