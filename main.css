@@ -38,8 +38,7 @@ a{
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-
+    justify-content: space-between;
     z-index: 1000; 
 
     padding: 0;
@@ -55,11 +54,11 @@ a{
     font-size: 20px;
     color: white;
     text-align: center;
-    padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-left: 30px;
     text-decoration: none;
+
+    padding: 20px;
+    margin-right: 75px;
+
     display: inline-block;
     transition: background 0.3s ease;
 }
@@ -67,6 +66,30 @@ a{
 .navbar a:hover {
     background-color: #0f4245;
 }
+
+#accueil {
+    margin-left: 30px;
+}
+
+/* Style du menu burger */
+.burger {
+    margin-left: auto;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+
 
 /*************************************** PAGE TITRE ***************************************/
 
@@ -134,6 +157,7 @@ a{
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures image scales properly */
+    background-color : #3f3f3f;
 }
 
 /* Slide overlay */
@@ -316,20 +340,10 @@ a{
 }
 
 /*************************************** ABOUT ***************************************/
-.about {
-    margin-right: var(--ABOUT-margin-right);
-    margin-left: var(--ABOUT-margin-left);
-}
-    
-.formations, .experiences, .competences, .interets {
-    border-radius: var(--ABOUT-border-radius);
-}
 
 .about h2 {
     text-transform: uppercase;
     padding-bottom: 20px;
-    /*margin-left: 150px;*/
-    text-align: center;
 }
 
 .about h3{
@@ -337,44 +351,10 @@ a{
     font-weight: 600;
 }
 
-/* Photo */
-
-.moiphoto {
-    float: left;
-    border-radius: var(--ABOUT-border-radius);
-    width:700px;
-    height: 400px;
-    overflow: hidden;
-}
-
-.moiphoto img {
-    float: left;
+#moiphoto img {
+    width: 100%;
+    height: auto;
     border-radius: 50px;
-    height: 100%;
-    width: auto;
-    display: block;
-}
-/***/
-
-.contact h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    text-align: right;
-    padding-top: 80px;
-}
-
-.contact p {
-    font-size: 17px;
-    text-align: right;
-}
-
-
-/* Boutons */
-
-.contact-button {
-    display: flex;
-    gap: 25px;
-    justify-content: flex-end;
 }
 
 .contact button {
@@ -388,8 +368,8 @@ a{
 }
 
 .contact button:hover {
-    background-color: #0f4245; /* Effet hover */
-    transition: background-color 0.3s ease; /* Animation pour un effet fluide */
+    background-color: #0f4245;
+    transition: background-color 0.3s ease;
 }
 
 #insta {
@@ -407,24 +387,15 @@ a{
     border-radius: 25px;
 }
 
-/***/
-
 /* Formations */
 
-.formations {
-    margin-top: 215px;
-    margin-bottom: 50px;
-    padding: 10px;
-
-    background-color: #0f4245;
-}
-
-.experiences, .competences, .interets {
+.formations, .experiences, .competences, .interets {
     margin-top: 50px;
     margin-bottom: 50px;
-    padding: 10px;
+    padding: 20px 50px;
 
     background-color: #0f4245;
+    border-radius: 50px;
 }
 
 .formations p, .experiences p, .competences p, .interets p {
@@ -432,7 +403,77 @@ a{
 }
 
 .formationIndividuelle, .experienceIndividuelle, .competenceIndividuelle, .interetIndividuel{
-    margin: 50px 40px;
+    margin: 50px 0;
 }
 
-/***/
+
+
+
+
+/************ PARTICULARITÉS RESPONSIVE ************/
+
+@media screen and (min-width: 900px){
+    .mon-profil {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 98.75%;
+        padding: 10px;
+    }
+    
+    #moiphoto {
+        flex: 1;
+    }
+    
+    .contact {
+        flex: 1;
+        text-align: right;
+        padding: 20px;
+    }
+    
+    .contact-button {
+        display: flex;
+        justify-content: flex-end; 
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .contact {
+        text-align: center;
+    }
+
+    .about h2 {
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: row;
+        background-color: #0f4245;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu a{
+        margin: 0;
+    }
+
+    .menu.active {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu.active a{
+        padding: 5px 20px;
+    }
+
+    .burger {
+        display: flex;
+    }
+}

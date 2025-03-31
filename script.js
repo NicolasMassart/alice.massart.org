@@ -14,3 +14,7 @@ function filterItems(category) {
 }
 
 filterItems('all');
+
+function toggleMenu() {
+    document.querySelector('.menu').classList.toggle('active');
+}

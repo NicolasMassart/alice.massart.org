@@ -13,39 +13,44 @@
     <!-- BARRE DE NAVIGATION -->
     <nav>
         <div class="navbar">
-            <a href="/">&#10023;</a>
-            <a href="projets.html">Mes projets</a>
-            <a href="references.html">Mes r&eacute;f&eacute;rences</a>
-            <a href="about.html" style="margin-left: auto; margin-right: 30px;">&Agrave; propos</a>
+            <a id="accueil" href="/">&#10023;</a>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a id="projets" href="projets.html">Mes projets</a>
+                <a id="references" href="references.html">Mes r&eacute;f&eacute;rences</a>
+                <a id="about" href="about.html">&Agrave; propos</a>
+            </div>
         </div>
     </nav>
         
-    
-    <!-- Photo -->
-    <div class="about moiphoto">
-        <img src="../src/img/about/moiphoto.jpg" alt=""></img>
-    </div>
-    
-
     <!-- Contact et à propos -->
     <div class="about">
-        
-        <div class="contact">
+
+        <div class="mon-profil">
+            <!-- Photo -->
+            <div class="about" id="moiphoto">
+                <img src="../src/img/about/moiphoto.jpg" alt=""></img>
+            </div>
             
-            <h2>Alice MASSART</h2>
-            <p>&Eacute;tudiante &agrave; l'&eacute;cole sup&eacute;rieure d'art et de design d'Orl&eacute;ans</p>
-            <p>Design Visuel et Graphique sp&eacute;cialisation Art et Design Digital</p>
+            <div class="contact">
+                
+                <h2>Alice MASSART</h2>
+                <p>&Eacute;tudiante &agrave; l'&eacute;cole sup&eacute;rieure d'art et de design d'Orl&eacute;ans</p>
+                <p>Design Visuel et Graphique sp&eacute;cialisation Art et Design Digital</p>
+                <p>alicemassart2@gmail.com</p>
 
-            <div class="contact-button">
-                <button id="insta" onClick="window.open('https://www.instagram.com/alima_crea?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')" role="button"></button>
-                <button id="linkedin" onClick="window.open('https://www.linkedin.com/in/alice-massart-042a042b5/', '_blank')" role="button"></button>
-                <button id="github" onClick="window.open('https://github.com/A-Massart', '_blank')" role="button"></button>
+                <div class="contact-button">
+                    <button id="insta" onClick="window.open('https://www.instagram.com/alima_crea?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')" role="button"></button>
+                    <button id="linkedin" onClick="window.open('https://www.linkedin.com/in/alice-massart-042a042b5/', '_blank')" role="button"></button>
+                    <button id="github" onClick="window.open('https://github.com/A-Massart', '_blank')" role="button"></button>
 
-            </div> 
-    
-            <p>amassart+contact@esad-orleans.fr</p>
+                </div> 
+            </div>
         </div>
-
         <!-- Formations -->
 
         <div class="formations">
@@ -93,19 +98,30 @@
                 <p>Anglais (B2-C1)</p>
             </div>
             <div class="competenceIndividuelle">
-                <p>Webdesign, Mise en page, Graphisme, Photographie</p>
-                <p>Travail d'équipe, Organisation, Communication interne et externe</p>
+                <h3>Webdesign et Programmation :</h3>
+                <p>— HTML, CSS, JavaScript, Python.</p>
+                <h3>Graphisme :</h3>
+                <p>— Affiche, Édition, Illustration.</p>
+                <h3>Photographie :</h3>
+                <p>— Macrophotographie, Photographie de paysages.</p>
             </div>
         </div>
 
         <div class="interets">
             <h2>Centres d'intérêts</h2>
             <div class="interetIndividuel">
-                <p>Musique, Photographie, Programmation, Illustration</p>
+                <h3>Musique et composition :</h3>
+                <p>— Piano, depuis 8 ans.</p>
+                <h3>Programmation :</h3>
+                <p>— Débuts sur Scratch il y a 12 ans.
+                Puis MIT APP Inventor, Python, HTML, CSS depuis 6 ans. JavaScript depuis 1 an.</p>
+                <h3>Photographie :</h3>
+                <p>— Débuts avec un appareil compact.
+                Aujour'dhui, utilisation d'un appareil Nikon D5100.</p>
             </div>
         </div>
     </div>
 
-
+    <script src="../script.js"></script>
 </body>
 </html>
