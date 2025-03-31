@@ -13,11 +13,17 @@
     <!-- BARRE DE NAVIGATION -->
     <nav>
         <div class="navbar">
-            <a href="/">&#10023;</a>
-            <a href="html_secondaires/projets.html">Mes projets</a>
-            <a href="html_secondaires/references.html">Mes r&eacute;f&eacute;rences</a>
-            <a href="html_secondaires/about.html" style="margin-left: auto; margin-right: 30px;">&Agrave; propos</a>
-
+            <a id="accueil" href="/">&#10023;</a>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a id="projets" href="projets.html">Mes projets</a>
+                <a id="references" href="references.html">Mes r&eacute;f&eacute;rences</a>
+                <a id="about" href="about.html">&Agrave; propos</a>
+            </div>
         </div>
     </nav>
 
