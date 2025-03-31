@@ -56,7 +56,7 @@ a{
     text-align: center;
     text-decoration: none;
 
-    padding: 20px;
+    padding: 20px 30px;
     margin-right: 75px;
 
     display: inline-block;
@@ -74,6 +74,8 @@ a{
 /* Style du menu burger */
 .burger {
     margin-left: auto;
+    margin-right: 10px;
+    
     padding: 10px;
     display: none;
     flex-direction: column;
@@ -92,63 +94,48 @@ a{
 
 
 /*************************************** PAGE TITRE ***************************************/
-
-.title-container {
-    position: relative;
-    margin-top: 150px;
-    text-align: center;
-
-    font-size: 30px;
-    color: white; /* Assurez-vous que le texte est lisible */
-}
-
-#rectangle-gauche {
-    position:absolute;
-    top: 0;
-    left:0;
-    width: 200px; /* Largeur ajustee pour un rectangle plus grand */
-    height: 480px; /* Hauteur ajustee */
-    background-color: #219ba1;
-    z-index: 1; /* Derriere le texte mais devant le fond */
-
-    font-family: "Bai Jamjuree", sans-serif;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#rectangle-droite {
-    position:absolute;
-    top: 0;
-    right:0;
-    width: 200px; /* Largeur ajustee pour un rectangle plus grand */
-    height: 430px;
-    background-color: #219ba1;
-    z-index: 1; /* Derriere le texte mais devant le fond */
-
-    font-family: "Bai Jamjuree", sans-serif;
-    font-weight: 400;
-    padding-top: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.title {
-    position: relative;
-    z-index: 2; /* Au-dessus du rectangle */
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .title img{
-    display: inline;
-    width: 750px;
+    flex-grow: 2;
+    max-width: 95vw;
+    max-height: 80vh;
+    order: 2;
+    padding: 10px;
+}
+
+.title__rectangle {
+    flex-grow: 1;
+    min-width: 20vw;
+    margin: 5vh 0;
+    background-color: #219ba1;
+
+    text-align: center;
+}
+
+.title__rectangle__texte {
+    font-size: 3vh;
+    padding: 5vh 0;
+}
+
+#title__rectangle__gauche {
+    order: 1;
+}
+
+#title__rectangle__droite {
+    order: 3;
 }
 
 
 /*************************************** GLOBAL STYLES ***************************************/
 .image-container {
-    position: relative; /* Enables correct positioning for .slide */
-    overflow: hidden; /* Ensures content stays inside the container */
+    position: relative;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -156,32 +143,29 @@ a{
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image scales properly */
+    object-fit: cover; 
     background-color : #3f3f3f;
 }
 
-/* Slide overlay */
 .slide {
     position: absolute;
-    top: -100%; /* Start off-screen */
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(74, 185, 191, 0.85); /* Semi-transparent background */
+    background-color: rgba(74, 185, 191, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Hidden by default */
-    transition: top 0.5s ease, opacity 0.5s ease; /* Sliding and opacity effect */
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease;
 }
 
-/* Slide effect on hover */
 .image-container:hover .slide {
-    top: 0; /* Move the slide from top to bottom */
-    opacity: 1; /* Make the slide visible */
+    top: 0;
+    opacity: 1;
 }
 
-/* Caption style */
 .legende {
     color: white;
     font-size: 15px;
@@ -196,7 +180,7 @@ a{
 .page_refs .image-container {
     position: relative;
     overflow: hidden;
-    transition: transform 1s ease; /* Optional scaling effect */
+    transition: transform 1s ease;
 }
 
 /*************************************** PROJETS SECTION ***************************************/
@@ -204,23 +188,23 @@ a{
     margin-top: 110px;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive avec des colonnes auto-ajustables */
-    gap: 20px; /* Espace entre les images */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
 }
 
 .projets .image-container {
-    margin-bottom: 20px; /* Espace entre les éléments */
-    height: 500px; /* Taille fixe du conteneur */
-    display: flex; /* Active Flexbox */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-    position: relative; /* Nécessaire pour le slide */
-    overflow: hidden; /* Cache les débordements éventuels */
+    margin-bottom: 20px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .projets video {
-    object-fit: contain; /* Maintient les proportions de la vidéo */
-    display: block; /* Corrige tout décalage non désiré */
+    object-fit: contain;
+    display: block;
     height: 500px;
     width: auto;
 }
@@ -242,22 +226,22 @@ a{
     display: block;
     width: 354px;
     height: 500px;
-    object-fit: contain; /* Ensures image scales properly */
+    object-fit: contain;
 }
 
 /* Slide overlay */
 .slide {
     position: absolute;
-    top: -100%; /* Start off-screen */
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(74, 185, 191, 0.85); /* Semi-transparent background */
+    background-color: rgba(74, 185, 191, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Hidden by default */
-    transition: top 0.5s ease, opacity 0.5s ease; /* Sliding and opacity effect */
+    opacity: 0;
+    transition: top 0.5s ease, opacity 0.5s ease;
 }
 
 /*************************************** REFERENCES SECTION ***************************************/
@@ -274,11 +258,11 @@ a{
 }
 
 .list-item {
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 .list-item.visible {
-    display: block; /* Visible when filtered */
+    display: block;
 }
 
 .filter-buttons {
@@ -310,17 +294,17 @@ a{
 /* Grid layout */
 .page_refs .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between items */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
-    grid-auto-rows: auto; /* Automatically adjusts row height */
+    grid-auto-rows: auto;
 }
 
 .page_refs .image-container {
-    margin-bottom: 20px; /* Adds spacing between images */
-    aspect-ratio: 1 / 1; /* Ensures a square aspect ratio */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Fade-in and smooth movement */
+    margin-bottom: 20px;
+    aspect-ratio: 1 / 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .page_refs .image-container.visible {

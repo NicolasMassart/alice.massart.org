@@ -312,11 +312,9 @@
         </div>
     </main>
 
-
-    <script>
+    <script src="../script.js">
         const videos = document.querySelectorAll('.videoPlay');
     
-        // Gère la visibilité des vidéos
         document.addEventListener('visibilitychange', () => {
             videos.forEach(video => {
                 if (document.visibilityState === 'visible') {
@@ -327,7 +325,6 @@
             });
         });
     
-        // Joue automatiquement toutes les vidéos au chargement de la page
         window.addEventListener('load', () => {
             videos.forEach(video => video.play());
         });
