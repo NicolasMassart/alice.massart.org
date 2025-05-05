@@ -461,30 +461,6 @@
         </div>
     </div>
 
-    <script src="../script.js">
-        function filterItems(category) {
-            const items = document.querySelectorAll('.image-container');
-
-            items.forEach(item => {
-                // Remove the 'hidden' class to make items visible
-                item.classList.remove('hidden');
-                
-                if (category === 'all') {
-                    // Show all items
-                    item.classList.add('visible');
-                } else if (item.classList.contains(category)) {
-                    // Show items with the matching category
-                    item.classList.add('visible');
-                } else {
-                    // Hide items that don't match the selected category
-                    item.classList.add('hidden');
-                }
-            });
-        }
-
-        // Show all items by default
-        filterItems('all');
-
-    </script>
+    <script src="../script.js"></script>
 </body>
 </html>

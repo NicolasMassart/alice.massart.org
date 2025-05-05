@@ -1,17 +1,18 @@
 function filterItems(category) {
-    const $items = document.querySelectorAll('.list-item');
-        console.log($items);
+    const items = document.querySelectorAll('.image-container');
 
-    $items.forEach(item => {
-        if (category === 'all') {
-            item.classList.add('visible'); // Affiche tous les éléments
-        } else if (item.classList.contains(category)) {
-            item.classList.add('visible'); // Affiche les éléments correspondants
+    items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.classList.remove('hidden');
         } else {
-            item.classList.remove('visible'); // Cache les éléments non correspondants
+            item.classList.add('hidden');
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    filterItems('all');
+});
 
 filterItems('all');
 
