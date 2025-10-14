@@ -185,7 +185,7 @@ a{
 
 /*************************************** PROJETS SECTION ***************************************/
 .projets {
-    margin-top: 110px;
+    /*margin-top: 110px;*/
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
