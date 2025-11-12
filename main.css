@@ -114,13 +114,16 @@ a{
     min-width: 20vw;
     margin: 5vh 0;
     background-color: #219ba1;
-
     text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title__rectangle__texte {
     font-size: 3vh;
-    padding: 5vh 0;
+    padding: 0;
 }
 
 #title__rectangle__gauche {
