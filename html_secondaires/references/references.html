@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Références - Alice Massart</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BARRE DE NAVIGATION -->
+    <nav>
+        <div class="navbar">
+            <a id="accueil" href="/">&#10023;</a>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a id="projets" href="../projets/projets.html">Mes projets</a>
+                <a id="references" href="references.html">Mes références</a>
+                <a id="about" href="../about.html">&Agrave; propos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FILTRES -->
+    <div class="page_refs">
+        <div class="filter-buttons">
+            <button onclick="filterItems('all')">Tous</button>
+            <button onclick="filterItems('webdesign')">Webdesign</button>
+            <button onclick="filterItems('jeu-ia-genart')">Jeu vidéo/IA/Generative Art</button>
+            <button onclick="filterItems('graphisme')">Graphisme/Illustration</button>
+            <button onclick="filterItems('animation')">Animation</button>
+            <button onclick="filterItems('photo')">Photographie</button>
+            <button onclick="filterItems('modelisation3D')">Modélisation 3D</button>
+            <button onclick="filterItems('DOE')">Design d'objet et d'espace</button>
+            <button onclick="filterItems('textile')">Textile</button>
+            <button onclick="filterItems('son')">Son et musique</button>
+            <button onclick="filterItems('art-sciences')">Art et Sciences</button>
+            <button onclick="filterItems('litterature')">Littérature</button>
+
+
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="image-grid" id="imageGrid"></div>
+    </div>
+
+    <script src="references.js"></script>
+</body>
+</html>

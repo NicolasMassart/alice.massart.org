@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const containerPersonnel = document.querySelector(".projets.personnel");
   const containerScolaire = document.querySelector(".projets.scolaire");
 
-  const res = await fetch("../projets.csv");
+  const res = await fetch("projets.csv");
   const text = await res.text();
 
   const lignes = text.trim().split("\n").slice(1);
@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (typeMedia.trim() === "video") {
       mediaHTML = `
         <video class="videoPlay" autoplay muted loop>
-          <source src="../src/img/${media.trim()}" type="video/mp4" />
+          <source src="../../src/img/${media.trim()}" type="video/mp4" />
         </video>
       `;
     } else {
-      mediaHTML = `<img src="../src/img/${media.trim()}" alt="${nom}" />`;
+      mediaHTML = `<img src="../../src/img/${media.trim()}" alt="${nom}" />`;
     }
 
     // Légende
@@ -51,6 +51,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.querySelectorAll('.legende a').forEach(link => {
     link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer'); // pour sécurité
+    link.setAttribute('rel', 'noopener noreferrer');
     });
 });

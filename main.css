@@ -297,7 +297,7 @@ a{
 /* Grid layout */
 .page_refs .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
     gap: 20px;
     padding: 20px;
     grid-auto-rows: auto;
