@@ -7,8 +7,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   const text = await res.text();
 
   const lignes = text.trim().split("\n").slice(1);
+
+  // Fonction pour retirer les guillemets autour d'un champ
+  const clean = str => str.replace(/^"(.*)"$/, "$1");
+
   lignes.forEach(ligne => {
-    const [categorie, nom, date, description, media, typeMedia] = ligne.split(/;(?=(?:(?:[^"]*"){2})*[^"]*$)/); // CSV safe
+    const champs = ligne.split(/;(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+
+    const [
+      categorie,
+      nom,
+      date,
+      description,
+      media,
+      typeMedia
+    ] = champs.map(clean); // CSV safe
 
     // Créer le conteneur du projet
     const projetDiv = document.createElement("div");
