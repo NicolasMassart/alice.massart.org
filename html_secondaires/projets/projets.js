@@ -8,8 +8,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const lignes = text.trim().split("\n").slice(1);
 
-  // Fonction pour retirer les guillemets autour d'un champ
-  const clean = str => str.replace(/^"(.*)"$/, "$1");
+  // Fonction pour retirer les guillemets EXTÉRIEURS et corriger "" -> "
+  const clean = str =>
+    str
+      .trim()
+      .replace(/^"(.*)"$/, "$1")   // retire les guillemets autour du champ
+      .replace(/""/g, '"');        // transforme "" en "
 
   lignes.forEach(ligne => {
     const champs = ligne.split(/;(?=(?:(?:[^"]*"){2})*[^"]*$)/);
@@ -21,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       description,
       media,
       typeMedia
-    ] = champs.map(clean); // CSV safe
+    ] = champs.map(clean);
 
     // Créer le conteneur du projet
     const projetDiv = document.createElement("div");
@@ -29,6 +33,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Media : image ou vidéo
     let mediaHTML = "";
+    const altNom = nom.replace(/<a\b[^>]*>|<\/a>/gi, "");
+
     if (typeMedia.trim() === "video") {
       mediaHTML = `
         <video class="videoPlay" autoplay muted loop>
@@ -36,10 +42,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         </video>
       `;
     } else {
-      mediaHTML = `<img src="../../src/img/${media.trim()}" alt="${nom}" />`;
+      mediaHTML = `
+        <img src="../../src/img/${media.trim()}" alt="${altNom}" />
+      `;
     }
 
-    // Légende
     const legendeHTML = `
       <div class="slide">
         <div class="legende">
@@ -62,8 +69,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-    document.querySelectorAll('.legende a').forEach(link => {
+  // Forcer les liens <a> à s'ouvrir dans un nouvel onglet
+  document.querySelectorAll('.legende a').forEach(link => {
     link.setAttribute('target', '_blank');
     link.setAttribute('rel', 'noopener noreferrer');
-    });
+  });
 });
