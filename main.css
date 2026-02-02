@@ -98,7 +98,6 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .title img{
@@ -297,9 +296,8 @@ a{
 /* Grid layout */
 .page_refs .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(168px, 0));
+    gap: 0 20px;
     grid-auto-rows: auto;
 }
 
@@ -421,6 +419,7 @@ a{
         justify-content: flex-end; 
         gap: 10px;
     }
+    
 }
 
 @media screen and (max-width: 900px){
@@ -460,5 +459,10 @@ a{
 
     .burger {
         display: flex;
+    }
+
+    .title {
+        flex-wrap: wrap;
+
     }
 }

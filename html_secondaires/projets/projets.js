@@ -24,8 +24,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       date,
       description,
       media,
-      typeMedia
+      typeMedia,
+      contenuSupplementaire
     ] = champs.map(clean);
+    console.log(contenuSupplementaire);
+
 
     // Créer le conteneur du projet
     const projetDiv = document.createElement("div");
@@ -53,6 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <h2>${nom}</h2>
           <p>${date}</p>
           <p>${description}</p>
+          ${contenuSupplementaire || ""}
         </div>
       </div>
     `;
