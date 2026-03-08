@@ -1,5 +1,6 @@
 Categorie;Nom;Artiste;Date;Media;TypeMedia
 webdesign;<a href"="https://supima.com/">Supima</a>;Développement marque : Jason L. THOMPSON, Marketing et promotions : Buxton S. MIDYETTE;2025;supima.mp4;video
+jeu-ia-genart graphisme;Paper Trail;Newfangled Games;2024;papertrail_newfangledGames.png;image
 graphisme;Compostion 41;The Oblivious Mind;2024;obliviousMind_compo41.jpeg;image
 photo;Flamingone;Miles ASTRAY;2024;astrayMiles.jpeg;image
 graphisme;Freeform;B-MOE;2024;moeB.jpg;image
@@ -13,6 +14,7 @@ jeu-ia-genart graphisme;Chants of Senaar;Rundisc;2023;rundisc_chantsOfSenaar.jpg
 photo;Metropolis;Alan SCHALLER;2023;schallerAlan.jpg;image
 graphisme;Abstract vermilion;Evelyn SCHUBERT;2023;schubertEvelyn.jpg;image
 graphisme photo;Heading to Moab;April SEELBACH;2023;seelbachApril.jpg;image
+;ENT-;Libby HEANEY;2022;ent_libbyHeaney.png;image
 graphisme;Material Burst;Adrien JAQUEMENT;2022;jacquemetAdrien_materialburst.jpg;image
 graphisme;Endless blues;Rozanne HERMELYN DI SILVESTRO;2022;hermelyndisilvestroRozanne.jpg;image
 jeu-ia-genart;Potion Permit;MassHive Media;2022;masshiveMedia_potionPermit.jpg;image
@@ -20,6 +22,7 @@ jeu-ia-genart graphisme;Cult of the Lamb;Massive Monster;2022;massiveMonster_cul
 graphisme DOE;Lunch Time;Golsa GOLCHINI;2022;golchiniGolsa.jpeg;image
 graphisme animation modelisation3D son;Jibaro;Alberto MIELGO;2022;mielgoAlberto.jpg;image
 graphisme animation modelisation3D son;Arcane;Christian LINKE, Marc MERILL, Brandon BECK, Jane CHUNG, Thomas VU;2021-2024;fortiche_arcane.jpg;image
+jeu-ia-genart graphisme;Papetura;Tomasz OSTAFIN;2021;papetura_tomaszOstafin.png;image
 jeu-ia-genart graphisme;Totally Accurate Battle Simulator;Landfall;2021;totally-accrurate-battle-simulator.webp;image
 textile;Fields of Reflections;Désiré MOHEB-ZANDI;2021;mohebzandiDesiree_fieldsofreflection.jpg;image
 jeu-ia-genart graohisme;Please, Touch the Artwork;Développeurs : Thomas Waterzooi, Studio Waterzooi, Meynen Studio;2020;please-touch-the-artwork.jpg;image
@@ -37,8 +40,10 @@ DOE;La Matière Du Temps;Richard SERRA;2015;serraRichard_laMatiereDuTemps.jpg;im
 webdesign;Spassky Fischer;Hugo ANGLADE, Thomas PETITJEAN et Antoine STEVENOT;2014;spasskyFischer.mp4;video
 graphisme animation son;Le Chant de la Mer;Tomm MOORE;2014;mooreTomm.jpg;image
 jeu-ia-genart graphisme;Monument Valley;Ustwo Games;2014;ustwoGames_monumentValley.jpeg;image
+;Candy Box;aniwey;2013;candybox_aniwey.png;image
 DOE;Unwoven Light;Soo Sunny Park;2013;sooSunnyPark_unwovenLight.png;image
 animation art-sciences;A Boy and His Atom;Réalisé par Nico Casavecchia, Production : 1st Ave Machine, Distribué par IBM Research;2013;a_boy_and_his_atom.jpg;image
+photo graphisme;Affiche festival 2012;DANSEM;2012;dansem2012.png;image
 photo DOE textile;Love is calling;Yayoi KUSAMA;Depuis 2012;kusamaYayoi.jpeg;image
 ;The Artist is present;Marina ABRAMOVIC;2010;abramovicMarina_theartistispresent.jpg;image
 jeu-ia-genart art-sciences;Foldit;University of Washington, Center for Game Science;2008;foldit.jpg;image
@@ -56,6 +61,7 @@ graphisme son;Ambient 1: Music for Airports;Brian ENO;1978;brianEno.jpg;image
 graphisme;A Captain from Portugal;Guy DE COINTET;1972;cointetGuy_captainFromPortugal.jpg;image
 DOE graphisme;Stabile-Mobile;Alexander CALDER;1970;calder_stabilemobile.jpg;image
 jeu-ia-genart;<a href="https://conwaylife.com/">Le jeu de la vie</a>;John H. CONWAY;1970;conway_jeuDeLaVie.gif;image
+graphisme photo;Étude pour l'affiche du Festival « Automne de Varsovie », Festival international de musique contemporaine ;Wojciech ZAMECZNIK;1965;etudeAutomneDeVarsovie_zamecznik.png;image
 graphisme;Le Monde Des Naïfs;Max ERNST;1965;ernstMax_leMondeDesNaifs.jpg;image
 photo;Première image de Mars;Sonde spatial Mariner 4;1964;mariner4_mars.png;image
 litterature;Oulipo;Fondé par Raymond QUENEAU, François LE LIONNAIS;Depuis 1960;oulipo.png;image
