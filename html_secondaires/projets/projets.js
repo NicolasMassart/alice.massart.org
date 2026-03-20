@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const legendeHTML = `
       <div class="slide">
         <div class="legende">
-          <h2>${nom}</h2>
+          <h3>${nom}</h3>
           <p>${date}</p>
           <p>${description}</p>
           ${contenuSupplementaire || ""}
