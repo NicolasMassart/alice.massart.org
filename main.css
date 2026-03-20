@@ -203,16 +203,6 @@ a{
     opacity: 1;
 }
 
-.legende {
-    color: white;
-    font-size: 15px;
-    text-align: center;
-    padding: 20px;
-    font-family: "BaiJamjuree", serif;
-    font-weight: 400;
-    position: absolute;
-}
-
 .projets .image-container,
 .page_refs .image-container {
     position: relative;
@@ -266,6 +256,15 @@ a{
     object-fit: contain;
 }
 
+.projets .legende {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    font-family: "BaiJamjuree", serif;
+    font-weight: 400;
+    position: absolute;
+}
 /*************************************** REFERENCES SECTION ***************************************/
 
 .page_refs {
@@ -341,6 +340,19 @@ a{
     transform: translateY(20px);
 }
 
+.page_refs .legende {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    font-family: "BaiJamjuree", serif;
+    font-weight: 400;
+    position: absolute;
+}
+
+.page_refs .legende > *{
+    margin: 3px 0;
+}
 /*************************************** ABOUT ***************************************/
 
 .about h2 {
