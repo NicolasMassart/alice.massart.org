@@ -1,18 +1,18 @@
-# Foule
-
-Mai 2024
+titre : "Foule"
+date : "Mai 2024"
+position : "center center"
 
 ## Description
-Travail autour du sentiment de différence. D'après l'étude du Docteur CIALDINI, un individu se sent vraiment différent lorsqu'il appartient à moins de 10 % d'une population ou d'un groupe.
+
+Travail autour du sentiment de différence, développé en code créatif.
+
+D'après l'étude du **Docteur CIALDINI**, un individu se sent vraiment différent lorsqu'il appartient à moins de 10 % d'une population ou d'un groupe.
 
 ## Concept
-Mes visuels s'appuient donc sur les probabilités de 10 %, 5 % et 1 % d'obtenir une couleur différente et pourtant, personne n'est jamais seul, il suffit de voir plus grand.
 
-## Inspiration
-- Étude du Docteur CIALDINI
-- Psychologie sociale
-- Visualisation de données
+Les visuels s'appuient sur les probabilités de **10 %, 5 % et 1 %** d'obtenir une couleur différente au sein d'une grille d'éléments identiques. Pourtant, personne n'est jamais seul — il suffit de voir plus grand.
 
----
+## Outils
 
-*Pour plus d'informations, n'hésitez pas à me contacter.*
+- Python (génération algorithmique)
+- Code créatif — S2

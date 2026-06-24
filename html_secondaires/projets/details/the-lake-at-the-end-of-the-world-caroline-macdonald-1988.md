@@ -1,17 +1,20 @@
-# The Lake at the End of the world - Caroline MacDonald (1988)
-
-Mars 2025
+titre : "The Lake at the End of the World"
+date : "Mars 2025"
+position : "center center"
 
 ## Description
-Workshop avec Élise VOËT. Cette installation collective reflète un corpus de rapports scientifiques sur l'analyse du lac : journal de bord, échantillons, analyses microscopiques, sismographe, etc.
 
-## Inspiration
-Inspiré des recherches scientifiques au sein de récits de science-fiction (*Arrival*, Denis Villeneuve 2016).
+Installation collective réalisée lors d'un workshop avec **Élise VOËT**, inspirée du roman *The Lake at the End of the World* de Caroline MacDonald (1988).
+
+## Concept
+
+L'installation reconstitue un corpus de **rapports scientifiques fictifs** sur l'analyse d'un lac : journal de bord, échantillons, analyses microscopiques, relevés sismographiques. Elle s'inscrit dans une réflexion sur les liens entre recherche scientifique et imaginaire de science-fiction, notamment inspirée par *Arrival* de Denis Villeneuve (2016).
+
+## Contexte
+
+Workshop Arts Numériques — S4.
 
 ## Collaboration
-- Élise VOËT
+
+- Workshop avec Élise VOËT
 - Installation collective
-
----
-
-*Pour plus d'informations, n'hésitez pas à me contacter.*

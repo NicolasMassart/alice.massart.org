@@ -1,13 +1,20 @@
-# Exploration de l'IA
-
-Janvier 2025
+titre : "Exploration de l'IA"
+date : "Janvier 2025"
+position : "center center"
 
 ## Description
-Workshop autour de l'IA, de ses capacités et de ses limites. Nous l'avons utilisé dans un jeu vidéo pour interpréter des personnalités et les faire interagir, par exemple une discussion entre C3PO et Jeanne d'Arc.
 
-## Démonstration
+Workshop autour des capacités et limites de l'intelligence artificielle, appliqué à la création d'un jeu vidéo.
+
+## Concept
+
+L'IA est utilisée pour **interpréter des personnalités fictives ou historiques** et les faire dialoguer — par exemple une conversation entre C3PO et Jeanne d'Arc. Le projet explore les biais, les lacunes et les possibilités créatives des modèles de langage.
+
+## Voir le projet
+
 [Voir la démonstration](https://drive.google.com/file/d/1cHc-nKkiWed_9l8yxuMBpr2pcdOo7Vhf/view?usp=sharing)
 
----
+## Outils
 
-*Pour plus d'informations, n'hésitez pas à me contacter.*
+- Modèle de langage (LLM)
+- Moteur de jeu vidéo

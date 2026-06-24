@@ -48,7 +48,7 @@
         .detail-content img {
             max-width: 100%;
             height: auto;
-            margin: 20px 0;
+            /*margin: 20px 0;*/
             border-radius: 5px;
         }
         .detail-content a {
@@ -56,6 +56,28 @@
         }
         .detail-content a:hover {
             text-decoration: underline;
+        }
+        .detail-galerie {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+            align-items: flex-start;
+        }
+        .detail-galerie img,
+        .detail-galerie video {
+            flex: 1 1 calc(33% - 10px);
+            max-width: 25vw;
+            display: block;
+            border-radius: 6px;
+        }
+        .detail-galerie .galerie-grand {
+            min-width: 50vw;
+        }
+        @media (max-width: 600px) {
+            .detail-galerie img,
+            .detail-galerie video { flex: 1 1 calc(50% - 10px); }
+            .detail-galerie .galerie-grand { min-width: 100%; }
         }
         .back-link {
             display: inline-block;
@@ -95,13 +117,30 @@
     </div>
 
     <script>
-        // Récupérer le slug depuis l'URL
+        // Récupérer les paramètres depuis l'URL
         const urlParams = new URLSearchParams(window.location.search);
         const slug = urlParams.get('slug');
+        const media = urlParams.get('media');
+        const typeMedia = urlParams.get('typeMedia');
+
+        // Image de fond derrière le bloc
+        if (media) {
+            const mediaPath = `../../../src/img/${media}`;
+            const bg = document.createElement('div');
+            bg.id = 'detail-bg';
+            bg.style.cssText = `
+                position: fixed;
+                inset: -10px;
+                z-index: -1;
+                background: url('${mediaPath}') center center / cover no-repeat;
+                filter: blur(6px) brightness(0.35);
+            `;
+            document.body.prepend(bg);
+        }
 
         if (slug) {
             // Charger le fichier markdown
-            fetch(`${slug}.md`)
+            fetch(`${slug}.md`, { cache: 'no-store' })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`Fichier non trouvé: ${slug}.md`);
@@ -116,16 +155,22 @@
                     let contentStart = 0;
 
                     // Chercher l'en-tête
+                    let bgPosition = 'center center';
                     for (let i = 0; i < lines.length; i++) {
                         const line = lines[i].trim();
                         if (line.startsWith('titre :')) {
                             title = line.replace('titre :', '').trim().replace(/^"|"$/g, '');
                         } else if (line.startsWith('date :')) {
                             date = line.replace('date :', '').trim().replace(/^"|"$/g, '');
+                        } else if (line.startsWith('position :')) {
+                            bgPosition = line.replace('position :', '').trim().replace(/^"|"$/g, '');
                         } else if (line === '' && title && date) {
                             contentStart = i + 1;
                             break;
                         }
+                    }
+                    if (document.getElementById('detail-bg')) {
+                        document.getElementById('detail-bg').style.backgroundPosition = bgPosition;
                     }
 
                     // Extraire le contenu après l'en-tête
@@ -143,7 +188,36 @@
                         headerHtml += `<p class="project-date">${date}</p>`;
                     }
 
-                    document.getElementById('content').innerHTML = headerHtml + html;
+                    const contentEl = document.getElementById('content');
+                    contentEl.innerHTML = headerHtml + html;
+
+                    // Transformer la section ## Galerie en grille d'images
+                    const headings = contentEl.querySelectorAll('h2');
+                    headings.forEach(h2 => {
+                        if (h2.textContent.trim().toLowerCase() === 'galerie') {
+                            const galerie = document.createElement('div');
+                            galerie.className = 'detail-galerie';
+                            let next = h2.nextElementSibling;
+                            while (next) {
+                                const sibling = next.nextElementSibling;
+                                const medias = next.querySelectorAll('img, video');
+                                if (medias.length > 0) {
+                                    medias.forEach(el => galerie.appendChild(el));
+                                    next.remove();
+                                } else if (next.tagName === 'VIDEO') {
+                                    galerie.appendChild(next);
+                                } else if (next.tagName === 'H2') {
+                                    break;
+                                } else {
+                                    next.remove();
+                                }
+                                next = sibling;
+                            }
+                            h2.replaceWith(galerie);
+                        }
+                    });
+
+                    document.getElementById('content').innerHTML = document.getElementById('content').innerHTML;
                 })
                 .catch(error => {
                     document.getElementById('content').innerHTML = `

@@ -1,23 +1,21 @@
-titre : "[Titre du projet]"
-date : "aaaa-mm-jj"
+titre : "Titre du projet"
+date : "Mois AAAA"
+position : "center center"
 
 ## Description
-[Description courte]
 
-## Détails du projet
+Courte description du projet.
 
-### Processus créatif
-- Point 1
-- Point 2
-- Point 3
+## Contexte
 
-### Résultats
-[Résultats et impact]
+Informations sur le cadre du projet (workshop, cours, collaboration...).
 
-### Technologies/Outils utilisés
-- [Outil 1]
-- [Outil 2]
+## Outils
 
----
+- Outil 1
+- Outil 2
 
-*Pour plus d'informations, n'hésitez pas à me contacter.*
+## Galerie
+
+![](../../../src/img/travail/nom-du-fichier.jpg)
+![](../../../src/img/travail/nom-du-fichier-2.jpg)

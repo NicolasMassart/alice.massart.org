@@ -1,13 +1,15 @@
-# Participation au projet MetaMistic
-
-Mars 2025
+titre : "Participation au projet MetaMistic"
+date : "Mars 2025"
+position : "center center"
 
 ## Description
-Jeux de formes et de visibilité avec de la peinture sensible aux UV.
 
-## Projet
-Participation au projet collectif [MetaMistic](https://metamistic.com/) explorant les possibilités créatives de la peinture réactive aux UV.
+Participation au projet collectif **[MetaMistic](https://metamistic.com/)**, explorant les possibilités créatives de la peinture réactive aux UV.
 
----
+## Travail réalisé
 
-*Pour plus d'informations, n'hésitez pas à me contacter.*
+Création de compositions jouant sur les **formes et la visibilité** : invisibles sous lumière normale, révélées sous lumière noire. Le projet questionne ce qui est montré, caché, et la relation entre l'œuvre et son contexte d'exposition.
+
+## Contexte
+
+Projet artistique collectif — MetaMistic, S4.

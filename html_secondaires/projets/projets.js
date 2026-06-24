@@ -41,9 +41,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(contenuSupplementaire);
 
 
-    // Créer le conteneur du projet
-    const projetDiv = document.createElement("div");
+    // Créer le conteneur du projet (carte cliquable)
+    const projetDiv = document.createElement("a");
     projetDiv.classList.add("image-container");
+    projetDiv.href = `details/detail.html?slug=${slugify(nom)}&media=${encodeURIComponent(media.trim())}&typeMedia=${encodeURIComponent(typeMedia.trim())}`;
 
     // Ajouter les classes de catégorie pour le filtrage
     const categoryClasses = categorie
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <span class="projet-date">${date}</span>
         </div>
         <p class="projet-desc">${description}</p>
-        <a href="details/detail.html?slug=${slugify(nom)}" class="btn-savoir-plus">En savoir plus →</a>
+        <span class="btn-savoir-plus">En savoir plus →</span>
       </div>
     `;
 
