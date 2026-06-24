@@ -26,37 +26,24 @@
             </div>
         </div>
     </nav>
-    
-    <!-- PROJETS -->
-    <main>
-        <h2>Projets réalisés dans un cadre professionnel</h2>
-        <div class="projets professionnel"></div>
 
-        <h2>Projets personnels</h2>
-        <div class="projets personnel"></div>
-
-        <h2>Projets réalisés dans le cadre scolaire</h2>
-        <div class="projets scolaire"></div>
-    </main>
-
+    <div class="page_projets">
+        <div class="filter-buttons">
+                <button onclick="filterItems('all')">Tous</button>
+                <button onclick="filterItems('graphisme')">Édition, Graphisme, Photographie</button>
+                <button onclick="filterItems('video-game')">Jeu vidéo, Expérience immersive</button>
+                <button onclick="filterItems('logiciel')">Logiciel</button>
+                <button onclick="filterItems('doe')">Design d'objet et d'espace, Modélisation 3D</button>
+                <button onclick="filterItems('son')">Son et musique</button>
+            </div>
+        
+        <!-- PROJETS -->
+        <main>
+            <div class="projets"></div>
+        </main>
+    </div>
     <script src="projets.js"></script>
-    <script src="../../script.js">
-        const videos = document.querySelectorAll('.videoPlay');
-    
-        document.addEventListener('visibilitychange', () => {
-            videos.forEach(video => {
-                if (document.visibilityState === 'visible') {
-                    video.play();
-                } else {
-                    video.pause();
-                }
-            });
-        });
-    
-        window.addEventListener('load', () => {
-            videos.forEach(video => video.play());
-        });
-    </script>
+    <script src="../../script.js"></script>
     
 </body>
 </html>

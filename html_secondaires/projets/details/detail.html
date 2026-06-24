@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du projet</title>
+    <link rel="stylesheet" href="../../../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .detail-content {
+            background-color: #0f4245;
+            padding: 40px;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+        .detail-content h1 {
+            color: #ffffff;
+            font-family: "Gulax";
+            margin-bottom: 0;
+            padding-bottom: 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .project-date {
+            color: #ffffff;
+            font-family: "Baskerville", serif;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 0 !important;
+
+        }
+        .detail-content h2 {
+            color: #ffffff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .detail-content p {
+            margin: 15px 0;
+        }
+        .detail-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .detail-content a {
+            color: #ffffff;
+        }
+        .detail-content a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- BARRE DE NAVIGATION -->
+    <nav>
+        <div class="navbar">
+            <a id="accueil" href="/"><img src="../../../src/img/logoHome.svg" alt="Accueil"></a>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="menu">
+                <a id="projets" href="../projets.html">Mes projets</a>
+                <a id="references" href="../../references/references.html">Mes références</a>
+                <a id="about" href="../../about.html">À propos</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="detail-container">
+        <a href="../projets.html" class="back-link">← Retour aux projets</a>
+        <div class="detail-content" id="content">
+            <p>Chargement du projet...</p>
+        </div>
+    </div>
+
+    <script>
+        // Récupérer le slug depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const slug = urlParams.get('slug');
+
+        if (slug) {
+            // Charger le fichier markdown
+            fetch(`${slug}.md`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Fichier non trouvé: ${slug}.md`);
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    // Parser l'en-tête YAML-like
+                    const lines = markdown.split('\n');
+                    let title = '';
+                    let date = '';
+                    let contentStart = 0;
+
+                    // Chercher l'en-tête
+                    for (let i = 0; i < lines.length; i++) {
+                        const line = lines[i].trim();
+                        if (line.startsWith('titre :')) {
+                            title = line.replace('titre :', '').trim().replace(/^"|"$/g, '');
+                        } else if (line.startsWith('date :')) {
+                            date = line.replace('date :', '').trim().replace(/^"|"$/g, '');
+                        } else if (line === '' && title && date) {
+                            contentStart = i + 1;
+                            break;
+                        }
+                    }
+
+                    // Extraire le contenu après l'en-tête
+                    const contentMarkdown = lines.slice(contentStart).join('\n');
+
+                    // Convertir le markdown en HTML
+                    const html = marked.parse(contentMarkdown);
+
+                    // Afficher titre et date
+                    let headerHtml = '';
+                    if (title) {
+                        headerHtml += `<h1>${title}</h1>`;
+                    }
+                    if (date) {
+                        headerHtml += `<p class="project-date">${date}</p>`;
+                    }
+
+                    document.getElementById('content').innerHTML = headerHtml + html;
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = `
+                        <h2>Erreur</h2>
+                        <p>${error.message}</p>
+                    `;
+                });
+        } else {
+            document.getElementById('content').innerHTML = `
+                <h2>Projet non spécifié</h2>
+                <p>Veuillez retourner aux projets.</p>
+            `;
+        }
+
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

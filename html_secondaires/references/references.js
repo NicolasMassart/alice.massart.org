@@ -71,4 +71,11 @@ function filterItems(category) {
             item.style.display = "none";
         }
     });
+
+    document.querySelectorAll('.filter-buttons button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    const activeBtn = [...document.querySelectorAll('.filter-buttons button')]
+        .find(btn => btn.getAttribute('onclick') === `filterItems('${category}')`);
+    if (activeBtn) activeBtn.classList.add('active');
 }
