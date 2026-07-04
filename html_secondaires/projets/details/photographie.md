@@ -27,3 +27,4 @@ Ces deux séries explorent comment la lumière transforme un sujet selon le cont
 ![alt text](../../../src/img/travail/2024_photo/DSC_0547.JPG)
 ![alt text](../../../src/img/travail/2024_photo/photoNoel_1.jpg)
 ![alt text](../../../src/img/travail/2024_photo/photoNoel_2.jpg)
+![alt text](../../../src/img/travail/2024_photo/2024_photos-fin-annee.JPG)

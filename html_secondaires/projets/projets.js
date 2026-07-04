@@ -14,7 +14,7 @@ const slugify = str => {
 document.addEventListener("DOMContentLoaded", async () => {
   const containerProjets = document.querySelector(".projets");
 
-  const res = await fetch("projets.csv");
+  const res = await fetch("projets.csv", { cache: 'no-store' });
   const text = await res.text();
 
   const lignes = text.trim().split("\n").slice(1);
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Ajouter les classes de catégorie pour le filtrage
     const categoryClasses = categorie
-      .split(/[,;|]+/)          // supporte plusieurs catégories séparées
+      .split(/[,;|\s]+/)        // supporte plusieurs catégories séparées (virgule, point-virgule, espace)
       .map(cat => cat.trim().toLowerCase())
       .filter(Boolean)
       .map(cat => cat
@@ -75,6 +75,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     const mediaHTML = `<div class="projet-media">${mediaInner}</div>`;
 
+    const categoryLabels = {
+      'graphisme': 'Graphisme',
+      'edition': 'Édition',
+      'photographie': 'Photographie',
+      'jeu-video': 'Jeu vidéo',
+      'experience-immersive': 'Expérience immersive',
+      'doe': "Design d'objet et d'espace",
+      'installation': 'Installation',
+      'modelisation-3d': 'Modélisation 3D',
+      'logiciel': 'Logiciel',
+      'code-creatif': 'Code Créatif',
+      'son': 'Son & Musique',
+    };
+    const tagsHTML = categoryClasses
+      .map(cls => `<span class="projet-tag">${categoryLabels[cls] || cls}</span>`)
+      .join('');
+
     const legendeHTML = `
       <div class="projet-info">
         <div class="projet-info-header">
@@ -82,7 +99,10 @@ document.addEventListener("DOMContentLoaded", async () => {
           <span class="projet-date">${date}</span>
         </div>
         <p class="projet-desc">${description}</p>
-        <span class="btn-savoir-plus">En savoir plus →</span>
+        <div class="projet-footer">
+          <div class="projet-tags">${tagsHTML}</div>
+          <span class="btn-savoir-plus">En savoir plus →</span>
+        </div>
       </div>
     `;
 
@@ -119,19 +139,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // --- Fonction de filtrage ---
 function filterItems(category) {
+    const categories = Array.isArray(category) ? category : [category];
     const items = document.querySelectorAll(".image-container");
     items.forEach(item => {
-        if (category === "all" || item.classList.contains(category)) {
-            item.classList.remove('hidden');
-        } else {
-            item.classList.add('hidden');
-        }
+        const match = categories[0] === 'all' || categories.some(cat => item.classList.contains(cat));
+        item.classList.toggle('hidden', !match);
     });
 
-    document.querySelectorAll('.filter-buttons button').forEach(btn => {
-        btn.classList.remove('active');
-    });
+    document.querySelectorAll('.filter-buttons button').forEach(btn => btn.classList.remove('active'));
     const activeBtn = [...document.querySelectorAll('.filter-buttons button')]
-        .find(btn => btn.getAttribute('onclick') === `filterItems('${category}')`);
+        .find(btn => {
+            try {
+                const arg = btn.getAttribute('onclick').replace("filterItems(", "").replace(")", "");
+                const parsed = JSON.parse(arg.replace(/'/g, '"'));
+                const btnCats = Array.isArray(parsed) ? parsed : [parsed];
+                return btnCats.length === categories.length && btnCats.every((c, i) => c === categories[i]);
+            } catch { return false; }
+        });
     if (activeBtn) activeBtn.classList.add('active');
 }

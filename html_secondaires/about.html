@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alice Massart</title>
-    <link rel="stylesheet" href="../main.css">
+    <title>Alice Massart — À propos</title>
+    <link rel="stylesheet" href="../main.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">-->
 </head>
 <body>
     <!-- BARRE DE NAVIGATION -->
@@ -21,129 +20,191 @@
             </div>
             <div class="menu">
                 <a id="projets" href="projets/projets.html">Mes projets</a>
-                <a id="references" href="references/references.html">Mes r&eacute;f&eacute;rences</a>
-                <a id="about" href="about.html">&Agrave; propos</a>
+                <a id="references" href="references/references.html">Mes références</a>
+                <a id="about" href="about.html">À propos</a>
             </div>
         </div>
     </nav>
-        
-    <!-- Contact et à propos -->
-    <main class="about">
 
-        <div class="mon-profil">
-            <!-- Photo -->
-            <div class="about" id="moiphoto">
-                <img src="../src/img/about/moiphoto.jpg" alt=""></img>
-            </div>
-            
-            <div class="contact">
-                
-                <h2>Alice MASSART</h2>
-                <p>&Eacute;tudiante &agrave; l'&eacute;cole sup&eacute;rieure d'art et de design d'Orl&eacute;ans</p>
-                <p>Design Visuel et Graphique sp&eacute;cialisation Art et Design Digital</p>
-                <p>alicemassart2+contact@gmail.com</p>
+    <main class="about-page">
 
+        <!-- HERO -->
+        <section class="about-hero">
+            <img class="about-photo" src="../src/img/about/moiphoto.jpg" alt="Alice Massart">
+            <div class="about-intro">
+                <h1 class="about-name">Alice Massart</h1>
+                <p class="about-subtitle">Étudiante à l'École Supérieure d'Art et Design d'Orléans<br>Design Visuel et Graphique — Art et Design Digital</p>
+                <a href="mailto:alicemassart2+contact@gmail.com" class="about-email">alicemassart2+contact@gmail.com</a>
                 <div class="contact-button">
-                    <button id="insta" onClick="window.open('https://www.instagram.com/alima_crea?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')" role="button"></button>
-                    <button id="linkedin" onClick="window.open('https://www.linkedin.com/in/alice-massart-042a042b5/', '_blank')" role="button"></button>
-                    <button id="github" onClick="window.open('https://github.com/A-Massart', '_blank')" role="button"></button>
-
-                </div> 
+                    <button id="insta" onClick="window.open('https://www.instagram.com/alima_crea?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')" role="button" aria-label="Instagram"></button>
+                    <button id="linkedin" onClick="window.open('https://www.linkedin.com/in/alice-massart-042a042b5/', '_blank')" role="button" aria-label="LinkedIn"></button>
+                    <button id="github" onClick="window.open('https://github.com/A-Massart', '_blank')" role="button" aria-label="GitHub"></button>
+                </div>
             </div>
-        </div>
-        <!-- Formations -->
+        </section>
 
-        <div class="formations">
-            <h2>Formations</h2>
+        <!-- FORMATIONS -->
+        <section class="about-section">
+            <h2 class="about-section-title">Formations</h2>
+            <div class="about-timeline">
 
-            <div class="formationIndividuelle">
-                <p><em>2023 À AUJOURD'HUI</em></p>
-                <h3>École Supérieure d'Art et Design d'Orléans, 45000 Orléans — Diplôme National d'Art</h3>
-                <p>Actuellement en 3e année du cursus Design Visuel et Graphique en section Digital Art and Design.</p>
+                <div class="timeline-item">
+                    <span class="timeline-date">2023 – auj.</span>
+                    <div class="timeline-content">
+                        <h3>École Supérieure d'Art et Design, Orléans (45)</h3>
+                        <p class="timeline-lieu">Diplôme National Supérieur d'Expression Plastique</p>
+                        <p>Bac +4 en master alternance Jeux Vidéos et Réalités Virtuelles.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2026</span>
+                    <div class="timeline-content">
+                        <h3>École Supérieure d'Art et Design, Orléans (45)</h3>
+                        <p class="timeline-lieu">Diplôme National d'Art</p>
+                        <p>Parcours : Design Visuel et Graphique (spécialité : Art et Design Numériques)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2023</span>
+                    <div class="timeline-content">
+                        <h3>Lycée Guillaume le Conquérant, Falaise (14)</h3>
+                        <p class="timeline-lieu">Baccalauréat général — Mention Bien</p>
+                        <p>Spécialités : Mathématiques, Physique-Chimie<br>
+                        Options : Mathématiques expertes, Section européenne anglais</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2020</span>
+                    <div class="timeline-content">
+                        <h3>Brevet d'Initiation à l'Aéronautique</h3>
+                        <p class="timeline-lieu">Club AéroClassic — Aérodrome des Monts d'Eraines, Damblainville (14) — Mention Très bien</p>
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-            <div class="formationIndividuelle">
-                <p><em>2023</em></p>
-                <h3>Lycée Guillaume le Conquérant, 14700 Falaise — Baccalauréat générale</h3>
-                <p>Spécialités : Mathématiques, Physique-Chimie</p>
-                <p>Options : Mathématiques expertes, Section européenne anglais</p>
-                <p>Mention : Bien</p>
+        <!-- EXPÉRIENCES -->
+        <section class="about-section">
+            <h2 class="about-section-title">Expériences</h2>
+            <div class="about-timeline">
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Juin - Juillet 2026</span>
+                    <div class="timeline-content">
+                        <h3>Fabrique Pointcarré, Saint-Denis (93)</h3>
+                        <p class="timeline-lieu">Stagiaire designer</p>
+                        <p>Graphisme pour l'organisation et la communication d'une exposition, photographie et retouches, webdesign, prototypage d'objets pour la production artisanale.
+                            <br>Gestion de projet et gestion de la relation client.</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Avril 2026</span>
+                    <div class="timeline-content">
+                        <h3>Laboratoire CNRS - ICARE, Orléans (45)</h3>
+                        <p class="timeline-lieu">Stagiaire designer</p>
+                        <p>Création de contenu artistique au service de la visualisation, de la médiation et de la vulgarisation scientifique.
+                        <br>Deux projets :
+                        <br>- Code créatif pour la visualisation de données.
+                        <br>- Jeu vidéo pour s'immerger dans le quotidien des chercheurs.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Juin 2025</span>
+                    <div class="timeline-content">
+                        <h3>Fabrique Pointcarré, Saint-Denis (93)</h3>
+                        <p class="timeline-lieu">Stagiaire graphiste</p>
+                        <p>Graphisme pour l'organisation et la communication d'une exposition, photographie et retouches, édition et mise en page, webdesign.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Avril 2024 – auj.</span>
+                    <div class="timeline-content">
+                        <h3>Cours particuliers de piano et solfège, Orléans</h3>
+                        <p class="timeline-lieu">Professeure à domicile</p>
+                        <p>Élèves de 5 à 40 ans, 5 à 8 heures par semaine. Conception d'exercices personnalisés et cours adaptés au niveau de chaque élève.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Avril 2024 –<br>Avril 2026</span>
+                    <div class="timeline-content">
+                        <h3>Bureau des Étudiants — ESAD Orléans</h3>
+                        <p class="timeline-lieu">Trésorière puis Co-dirigeante</p>
+                        <p>Administratif, organisation d'événements, contact avec les collectifs, mise en place de nouvelles initiatives au sein de l'établissement.</p>
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-            <div class="formationIndividuelle">
-                <p><em>2020</em></p>
-                <h3>Centre d'examen du Collège Sainte-Trinité, 14700 Falaise - Brevet d'Initiation à l'Aéronautique</h3>
-                <p> → Formation au club AéroClassic à l'Aérodrome des Monts d'Eraines, 14620 Damblainville</p>
-                <p>Mention : Très bien</p>
+        <!-- COMPÉTENCES -->
+        <section class="about-section">
+            <h2 class="about-section-title">Compétences</h2>
+            <div class="about-skills-grid">
+
+                <div class="skill-card">
+                    <h3>Langues</h3>
+                    <p>Français — langue maternelle</p>
+                    <p>Anglais — B2/C1</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Graphisme</h3>
+                    <p>Affiche, édition, illustration</p>
+                    <p>Scribus, Krita, Inkscape</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Programmation</h3>
+                    <p>HTML, CSS, JavaScript, Python, React <em>(en cours)</em></p>
+                    <p>VS Code, GitHub</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Photographie</h3>
+                    <p>Macrophotographie, paysage</p>
+                    <p>Nikon D5100</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>3D & Interactif</h3>
+                    <p>Blender, Godot, Unity</p>
+                </div>
+
             </div>
+        </section>
 
-        </div>
+        <!-- CENTRES D'INTÉRÊTS -->
+        <section class="about-section">
+            <h2 class="about-section-title">Centres d'intérêts</h2>
+            <div class="about-skills-grid">
 
-        <!-- Expériences -->
+                <div class="skill-card">
+                    <h3>Musique</h3>
+                    <p>Piano et orchestre à cordes depuis 2016. Composition et enseignement.</p>
+                </div>
 
-        <div class="experiences">
-            <h2>Expériences</h2>
+                <div class="skill-card">
+                    <h3>Programmation</h3>
+                    <p>Premiers pas sur Scratch en CE1, puis Python, HTML/CSS (2018), JavaScript (2024).</p>
+                </div>
 
-            <div class="experienceIndividuelle">
-                <p><em>JUIN 2025</em></p>
-                <h3>Fabrique Pointcarré, 93200 Saint-Denis - Stagiaire graphiste</h3>
-                <p>Graphisme pour l'organisation et la communication d'une exposition, photographie et retouches, édition et mise en page, webdesign.</p>
+                <div class="skill-card">
+                    <h3>Photographie</h3>
+                    <p>De l'appareil compact d'enfance au Nikon D5100 — paysage et macrophotographie.</p>
+                </div>
+
             </div>
+        </section>
 
-            <div class="experienceIndividuelle">
-                <p><em>AVRIL 2024 À AUJOURD'HUI</em></p>
-                <h3>Cours particuliers de piano et solfège, Orléans — Professeure</h3>
-                <p>Enseignement à domicile à des élèves de 5 à 40 ans.<br>
-                Entre 5 et 8 heures de cours données par semaine.<br>
-                    → conception d'exercices, identification des difficultés de l'élève et cours adaptés et personnalisés.</p>
-            </div>
-
-            <div class="experienceIndividuelle">
-                <p><em>AVRIL 2024 À AUJOURD'HUI</em></p>
-                <h3>Association du Bureau des Étudiants de l'ESAD Orléans, 45000 Orléans — Trésorière puis Co-dirigeante</h3>
-                <p>Je me suis occupée d'une partie de l'administratif et de l'organisation. <br />
-                    → mise en place d'évènements, contact avec les collectifs, mise en place de nouvelles idées au sein de l'établissement, etc.<br />
-                </p>
-            </div>
-        </div>
-
-        <!-- Compétences et centres d'intérêts -->
-        <div class="competences">
-            <h2>Compétences</h2>
-            <div class="competenceIndividuelle">
-                <h3>Langues :</h3>
-                <p>Français (langue maternelle)</p>
-                <p>Anglais (B2-C1)</p>
-            </div>
-            <div class="competenceIndividuelle">
-                <h3>Webdesign et Programmation :</h3>
-                <p>— HTML, CSS, JavaScript, Python.</p>
-                <h3>Graphisme :</h3>
-                <p>— Affiche, Édition, Illustration.</p>
-                <h3>Photographie :</h3>
-                <p>— Macrophotographie, Photographie de paysages.</p>
-            </div>
-            <div class="competenceIndividuelle">
-                <h3>Mes outils :</h3>
-                <p>Graphisme : Scribus, Krita, Inkscape, Blender</p>
-                <p>Programmation et : Visual Studio Code, Github</p>
-                <p>Design d'interaction : Arduino, Godot, Unity (en cours d'apprentissage)</p>
-            </div>
-        </div>
-
-        <div class="interets">
-            <h2>Centres d'intérêts</h2>
-            <div class="interetIndividuel">
-                <h3>Musique et composition musicale :</h3>
-                <p>— Piano, orchestre à cordes. Une passion d'enfance concrétisée depuis 2016.</p>
-                <h3>Programmation :</h3>
-                <p>— Débuts sur Scratch lorsque j'étais en CE1.
-                Puis MIT APP Inventor, Python, HTML, CSS depuis 2018. JavaScript depuis 2024.</p>
-                <h3>Photographie :</h3>
-                <p>— Débuts sur appareil compact étant enfant.
-                Aujourd'hui, utilisation d'un appareil Nikon D5100 pour la photographie de paysage et macrophotographie.</p>
-            </div>
-        </div>
     </main>
 
     <script src="../script.js"></script>

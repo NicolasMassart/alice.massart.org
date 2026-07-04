@@ -15,3 +15,7 @@ Un joueur dispose d'un écran, l'autre d'une fiche papier. Ils doivent communiqu
 - Pixel art
 - Moteur de jeu vidéo
 - Design de jeu coopératif
+
+## Galerie
+
+<video class="galerie-grand" autoplay loop muted src="../../../src/img/travail/SituTip.mp4" title="Démonstration du jeu SituTip"></video>

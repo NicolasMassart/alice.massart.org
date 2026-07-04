@@ -19,3 +19,7 @@ Deux sketches interactifs explorant l'**interaction des formes et des grilles** 
 
 - p5.js
 - Code créatif — S3
+
+## Galerie
+![Image générée par le code créatif p5.js "Suivre"](../../../src/img/travail/p5js/2025_p5js_suivre.png)
+![Image générée par le code créatif p5.js "S'écarter"](../../../src/img/travail/p5js/2025_p5js_secarter.png)
