@@ -8,7 +8,9 @@ Affiche typographique créée à partir d'une **typographie entièrement invent�
 
 ## Démarche
 
-Le projet part de la création d'un alphabet original dont les formes évoquent tension et rupture. La typographie devient le sujet même de l'affiche, portant le sens du mot par sa seule structure visuelle.
+Le projet part de la création d'un alphabet à la main dont les formes évoquent tension et rupture. La typographie devient le sujet même de l'affiche, portant le sens du mot par sa seule structure visuelle.
+
+De la création de la lettre à la composition d'affiche.
 
 ## Outils
 
