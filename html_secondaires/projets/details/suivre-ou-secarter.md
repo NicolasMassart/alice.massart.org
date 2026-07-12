@@ -4,7 +4,7 @@ position : "center center"
 
 ## Description
 
-Deux sketches interactifs explorant l'**interaction des formes et des grilles** en p5.js, réalisés avec Sylvie TISSOT.
+Deux sketches interactifs explorant l'interaction des formes et des grilles en p5.js, réalisés avec Sylvie TISSOT.
 
 ## Concept
 

@@ -6,13 +6,13 @@ position : "center center"
 
 Travail autour du sentiment de différence, développé en code créatif.
 
-D'après l'étude du **Docteur CIALDINI**, un individu se sent vraiment différent lorsqu'il appartient à moins de 10 % d'une population ou d'un groupe.
-
 ## Concept
 
-Les visuels s'appuient sur les probabilités de **10 %, 5 % et 1 %** d'obtenir une couleur différente au sein d'une grille d'éléments identiques. Pourtant, personne n'est jamais seul — il suffit de voir plus grand.
+D'après l'étude *Influence: The Psycjology of Persuasion* du Docteur CIALDINI, un individu se sent vraiment différent lorsqu'il appartient à moins de 10 % d'une population ou d'un groupe. Mes visuels s'appuient donc sur les probabilités de 10%, 5% et 1% d'obtenir une couleur différente et pourtant, personne n'est jamais seul, il suffit de voir plus grand.
 
 ## Outils
 
-- Python (génération algorithmique)
-- Code créatif — S2
+- Python : Librairie turtle
+
+## Galerie
+![Visuel d'une foule générée](../../../src/img/travail/2024_foule/GrandFormat_foule_alicem.png)

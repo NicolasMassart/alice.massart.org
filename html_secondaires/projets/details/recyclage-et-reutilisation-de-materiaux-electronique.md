@@ -4,12 +4,11 @@ position : "center center"
 
 ## Description
 
-Workshop avec **Quentin DESTIEU** autour du recyclage et de la réutilisation de composants électroniques pour fabriquer des instruments sonores.
+Workshop avec Quentin DESTIEU autour du recyclage et de la réutilisation de composants électroniques pour fabriquer des instruments sonores.
 
 ## Concept
 
-Création d'instruments explorant la **transformation de l'énergie mécanique en énergie électrique**. Des matériaux récupérés deviennent des sources sonores, questionnant le rapport aux déchets technologiques et à la lutherie DIY.
+Construites en matériaux de récupération et chacune équipée d’un kit électronique Arduino, l’une transforme les vibrations en électricité tandis que l’autre convertit l’énergie mécanique en énergie électrique. Leurs interactions créent des sons surprenants comme grondements et larsens.
 
-## Contexte
-
-Workshop Design Numérique — S2.
+## Galerie
+![Installation des deux enceintes-instrument](../../../src/img/travail/2024_wsDIY.jpg)

@@ -4,20 +4,15 @@ position : "top center"
 
 ## Description
 
-Design graphique de l'exposition *Les Métamorphoses du Parquet*, présentée lors de la **Paris Design Week 2025** à La Maison des Canaux, Paris 19ème, du 04 au 09 septembre 2025.
+Design graphique de l'exposition *Les Métamorphoses du Parquet*, présentée lors de la Paris Design Week 2025 à La Maison des Canaux, Paris 19ème, du 04 au 09 septembre 2025.
 
-Collaboration entre **Fabrique Pointcarré** et **Fibois Île-de-France**, autour de la valorisation du parquet comme matériau vivant et évolutif.
+Collaboration entre la [Fabrique Pointcarré](https://www.fabriquepointcarre.org/) et Fibois Île-de-France, autour de la valorisation du parquet comme matériau de réemploi.
 
 [Édition 2025 ⎪ lesmetamorphoses-expo.fr](https://www.lesmetamorphoses-expo.fr/edition-2025)
 
 ## Travail réalisé
 
-Conception de l'identité visuelle de l'exposition : affiches, signalétique, supports de communication. La direction artistique s'appuie sur les lignes et textures du bois, entre rigueur géométrique et chaleur du matériau.
-
-## Collaboration
-
-- Fabrique Pointcarré
-- Fibois Île-de-France
+Graphisme pour l'organisation et la communication de l'exposition : affiches, signalétique, supports de communication.
 
 ## Galerie
 

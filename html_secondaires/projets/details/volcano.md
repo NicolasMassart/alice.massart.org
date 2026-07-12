@@ -8,7 +8,7 @@ Projet de groupe s'inspirant d'œuvres du FRAC d'Orléans pour créer un storybo
 
 ## Mon rôle
 
-**Design sonore** — composition et création de l'ambiance sonore accompagnant le storyboard animé.
+Design sonore : composition et création de l'ambiance sonore accompagnant le storyboard animé.
 
 ## Voir le projet
 

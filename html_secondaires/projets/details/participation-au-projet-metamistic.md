@@ -4,7 +4,7 @@ position : "center center"
 
 ## Description
 
-Participation au projet collectif **[MetaMistic](https://metamistic.com/)**, explorant les possibilités créatives de la peinture réactive aux UV.
+Participation au projet collectif [MetaMistic](https://metamistic.com/), explorant les possibilités créatives de la peinture réactive aux UV.
 
 ## Travail réalisé
 

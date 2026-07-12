@@ -1,6 +1,13 @@
+// D\u00e9code les entit\u00e9s HTML (&apos; \u2192 ', &eacute; \u2192 \u00e9, etc.)
+const decodeHTML = str => {
+  const el = document.createElement('textarea');
+  el.innerHTML = str;
+  return el.value;
+};
+
 // Fonction pour convertir un texte en slug
 const slugify = str => {
-  return str
+  return decodeHTML(str)
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -82,6 +89,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       'jeu-video': 'Jeu vidéo',
       'experience-immersive': 'Expérience immersive',
       'doe': "Design d'objet et d'espace",
+      'do': "Design d'objet",
+      'de': "Design d'espace",
       'installation': 'Installation',
       'modelisation-3d': 'Modélisation 3D',
       'logiciel': 'Logiciel',

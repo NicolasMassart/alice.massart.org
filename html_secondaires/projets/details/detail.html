@@ -67,9 +67,13 @@
         .detail-galerie img,
         .detail-galerie video {
             flex: 1 1 calc(33% - 10px);
-            max-width: 25vw;
+            /*max-width: 25vw;*/
             display: block;
             border-radius: 6px;
+        }
+        .detail-galerie video {
+            max-width: 100%;
+            height: auto;
         }
         .detail-galerie .galerie-grand {
             min-width: 50vw;

@@ -4,17 +4,28 @@ position : "center center"
 
 ## Description
 
-Workshop autour des capacités et limites de l'intelligence artificielle, appliqué à la création d'un jeu vidéo.
+Travail de groupe lors d'un workshop autour des capacités et limites de l'intelligence artificielle, appliqué à la création d'un jeu vidéo.
 
 ## Concept
 
-L'IA est utilisée pour **interpréter des personnalités fictives ou historiques** et les faire dialoguer — par exemple une conversation entre C3PO et Jeanne d'Arc. Le projet explore les biais, les lacunes et les possibilités créatives des modèles de langage.
+L’*Humanoscope*, qui tire son nom de l’insectoscope, est une expérience d'observation interactive où le joueur a la possibilité de choisir certains spécimens et d’étudier leur interactions.  A l’instar des travaux du naturaliste Jean-Baptiste Lamarck et de ses *Recherches sur l'organisation des corps vivants*, ce projet consiste à observer ici le comportement d’intelligences artificielles dans un environnement numérique. Ici les *spécimens* ne sont pas des insectes mais des personnages réels ou fictifs choisis en fonction de leur identité et de leurs styles potentiels d’interaction. L’objectif est d’utiliser une IA pour incarner ces spécimens à l’aide de prompts qui définissent les personnages et génèrent leurs dialogues. Le système reproduit ainsi des interactions variées, simulant une démarche scientifique inspirée de l’entomologie et transposée dans un cadre numérique.
+
+Ce projet trouve son origine dans de nombreuses références comme *Totally accurate battle simulator* pour son gameplay, *Candy Box* et *A Dark Room* pour leur progression minimaliste et narrative ou encore les œuvres d’Adel Faure pour leurs aspects esthétique.
 
 ## Voir le projet
 
-[Voir la démonstration](https://drive.google.com/file/d/1cHc-nKkiWed_9l8yxuMBpr2pcdOo7Vhf/view?usp=sharing)
+[Voir la démonstration du projet](https://drive.google.com/file/d/1cHc-nKkiWed_9l8yxuMBpr2pcdOo7Vhf/view?usp=sharing)
 
 ## Outils
 
-- Modèle de langage (LLM)
-- Moteur de jeu vidéo
+- ChatGPT 
+- Llama + LM Studio
+- interface web
+- Illustrator
+- Penpot
+- Github 
+
+
+## Galerie
+
+![Vue de l'écran lors d'une expérience de jeu](../../../src/img/travail/2025_wsExplorationIA.png)

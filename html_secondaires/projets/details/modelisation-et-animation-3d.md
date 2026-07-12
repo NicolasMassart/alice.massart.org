@@ -4,7 +4,7 @@ position : "center center"
 
 ## Description
 
-Progression sur **Blender** sur trois semestres — de la modélisation d'objets simples aux animations de personnages en low poly, grease pencil et structures avancées.
+Progression sur Blender sur trois ans, de la modélisation d'objets simples aux animations de personnages en low poly, grease pencil et structures avancées.
 
 ## Progression
 
@@ -26,16 +26,13 @@ Utilisation de grease pencil, modélisation 3D basique, add-ons et jeux de lumi�
 
 ## Outils
 
-- Blender
-- Modélisation low poly
-- Rigging et animation 3D
-- Rendu Cycles / EEVEE
+- Blender 3D
 
 ## Galerie
 
-<video autoplay muted loop src="../../../src/img/travail/modelisation/2024_fiole.mp4"></video>
-![Modélisation 3D d'un petit sorcier](../../../src/img/travail/modelisation/2024_sorcier.jpg)
-![Modélisation 3D et animation d'une fiole de potion bleue](../../../src/img/travail/modelisation/2025_beluga.png)
-<video class="galerie-grand" autoplay muted loop src="../../../src/img/travail/modelisation/2025_belugaAnimation.mp4"></video>
-<video class="galerie-grand" autoplay muted loop src="../../../src/img/travail/modelisation/2025_mouseAnimation.mp4"></video>
-<video class="galerie-grand" autoplay muted loop src="../../../src/img/travail/modelisation/2026_rabbitsNightAnimation.mp4"></video>
+<video autoplay muted loop src="../../../src/img/travail/2024-2025_modelisation/2024_fiole.mp4"></video>
+![Modélisation 3D d'un petit sorcier](../../../src/img/travail/2024-2025_modelisation/2024_sorcier.jpg)
+![Modélisation 3D et animation d'une fiole de potion bleue](../../../src/img/travail/2024-2025_modelisation/2025_beluga.png)
+<video class="galerie-grand" autoplay muted loop src="../../../src/img/travail/2024-2025_modelisation/2025_belugaAnimation.mp4"></video>
+<video class="galerie-grand" autoplay muted loop src="../../../src/img/travail/2024-2025_modelisation/2025_mouseAnimation.mp4"></video>
+<video class="galerie-grand" autoplay muted loop src="../../../src/img/travail/2024-2025_modelisation/2026_rabbitsNightAnimation.mp4"></video>

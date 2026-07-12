@@ -4,17 +4,17 @@ position : "center center"
 
 ## Description
 
-Jeu à choix multiples réalisé sur **Twine**. Nous suivons l'histoire d'une petite fille à la plage et les décisions qu'elle prend au fil de son aventure.
+Jeu à choix multiples réalisé sur Twine. Nous suivons l'histoire d'une petite fille à la plage et les décisions qu'elle prend au fil de son aventure.
 
 ## Démarche
 
-Exploration de la narration non-linéaire et de l'écriture interactive. Le projet questionne comment les choix du joueur construisent une histoire personnelle à partir d'une même trame narrative.
-
+Exploration de la narration non-linéaire et de l'écriture interactive.
+Le projet met en scène un souvenir d'enfance d'une camarade de classe, un souvenir au bord de mer vu par les yeux de la petite fille qu'elle était.
 ## Outils
 
 - Twine
-- Écriture interactive
-- Narration non-linéaire
+- Krita
+- Peinture aquarelle et crayons aquarellables
 
 ## Galerie
 
