@@ -57,32 +57,67 @@
         .detail-content a:hover {
             text-decoration: underline;
         }
+        /* Galerie grid */
         .detail-galerie {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: dense;
+            gap: 8px;
             margin: 20px 0;
-            align-items: flex-start;
         }
         .detail-galerie img,
         .detail-galerie video {
-            flex: 1 1 calc(33% - 10px);
-            /*max-width: 25vw;*/
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
             display: block;
-            border-radius: 6px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
         }
-        .detail-galerie video {
-            max-width: 100%;
-            height: auto;
-        }
+        .detail-galerie img:hover,
+        .detail-galerie video:hover { opacity: 0.85; }
         .detail-galerie .galerie-grand {
-            min-width: 50vw;
+            grid-column: span 2;
+            aspect-ratio: 2 / 1;
         }
         @media (max-width: 600px) {
-            .detail-galerie img,
-            .detail-galerie video { flex: 1 1 calc(50% - 10px); }
-            .detail-galerie .galerie-grand { min-width: 100%; }
+            .detail-galerie { grid-template-columns: repeat(2, 1fr); }
+            .detail-galerie .galerie-grand { grid-column: span 2; aspect-ratio: 2 / 1; }
         }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox.open { display: flex; }
+        #lightbox-media {
+            max-width: 90vw;
+            max-height: 88vh;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        #lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 28px;
+            font-size: 36px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+            opacity: 0.8;
+            transition: opacity 0.15s;
+        }
+        #lightbox-close:hover { opacity: 1; }
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
@@ -112,6 +147,12 @@
             </div>
         </div>
     </nav>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <button id="lightbox-close" onclick="closeLightbox()">×</button>
+        <div id="lightbox-inner"></div>
+    </div>
 
     <div class="detail-container">
         <a href="../projets.html" class="back-link">← Retour aux projets</a>
@@ -221,7 +262,10 @@
                         }
                     });
 
-                    document.getElementById('content').innerHTML = document.getElementById('content').innerHTML;
+                    // Attacher les listeners lightbox sur chaque média de la galerie
+                    document.querySelectorAll('.detail-galerie img, .detail-galerie video').forEach(el => {
+                        el.addEventListener('click', () => openLightbox(el));
+                    });
                 })
                 .catch(error => {
                     document.getElementById('content').innerHTML = `
@@ -235,6 +279,44 @@
                 <p>Veuillez retourner aux projets.</p>
             `;
         }
+
+        function openLightbox(el) {
+            const lb = document.getElementById('lightbox');
+            const inner = document.getElementById('lightbox-inner');
+            inner.innerHTML = '';
+            if (el.tagName === 'VIDEO') {
+                const v = document.createElement('video');
+                v.src = el.src || el.querySelector('source')?.src;
+                v.controls = true;
+                v.autoplay = true;
+                v.id = 'lightbox-media';
+                inner.appendChild(v);
+            } else {
+                const img = document.createElement('img');
+                img.src = el.src;
+                img.id = 'lightbox-media';
+                inner.appendChild(img);
+            }
+            lb.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('open');
+            document.getElementById('lightbox-inner').innerHTML = '';
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('lightbox').addEventListener('click', e => {
+            if (e.target === document.getElementById('lightbox') || e.target === document.getElementById('lightbox-inner')) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
 
         function toggleMenu() {
             document.querySelector('.menu').classList.toggle('active');
