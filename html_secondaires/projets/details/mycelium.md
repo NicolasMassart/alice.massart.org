@@ -11,25 +11,27 @@ Lien vers tous les jeux :  [https://itch.io/jam/orlans-gamejam4](https://itch.io
 Mycélium est un jeu dans lequel on incarne un personnage qui fait la rencontre d'un étrange scientifique dans une forêt. Il va nous charger d'une mission !! J'ai trouvé la potion. Mais laquelle ? Et comment la faire ? C'est à vous de le découvrir...
 
 ## Notre « Quest List » :
-- Intégrer une mécanique de mélange d'ingrédients
-- Intégrer les 5 saveurs : sucré, salé, acide, amer, umami
-- Faire d'un scientifique un personnage principal
-- Faire du goût, de l'odorat ou de la perception sensorielle un élément du scénario
-- Intégrer un laboratoire, une cuisine ou un lieu mélangeant les deux
+- Intégrer une mécanique de mélange d'ingrédients  
+- Intégrer les 5 saveurs : sucré, salé, acide, amer, umami  
+- Faire d'un scientifique un personnage principal  
+- Faire du goût, de l'odorat ou de la perception sensorielle un élément du scénario  
+- Intégrer un laboratoire, une cuisine ou un lieu mélangeant les deux  
 
 ## Contrôles :
-Q/D ou ←/→ : Déplacement
-Z/S ou ↑/↓ : Grimper aux échelles
-E : Interagir
-Espace : Saut et double saut, Passer le dialogue
+Q/D ou ←/→ : Déplacement  
+Z/S ou ↑/↓ : Grimper aux échelles  
+E : Interagir  
+Espace : Saut et double saut, Passer le dialogue  
 
 ## Équipe :
-Alyssia Makhloufi -  Artiste 2D & UI
-Alice Massart - Game Designer, Développeuse, UI/UX & Compositrice
-Noah Touré  - Sound Designer  & Concepteur des dialogues
+Alyssia Makhloufi -  Artiste 2D & UI  
+Alice Massart - Game Designer, Développeuse, UI/UX & Compositrice  
+Noah Touré  - Sound Designer  & Concepteur des dialogues  
 
 ## Outils utilisés :
-Procreate, Godot 2D, Audacity
+- Procreate  
+- Godot 2D  
+- Audacity
 
 ## Téléchargement
 <div style="text-align:center;">
